@@ -52,7 +52,15 @@ def _tables(config: Path, sources: list[dict]) -> list[dict]:
             out.append({"source_id": s["id"], "table_no": t.get("table_no") or t["id"], "title_en": t.get("title_en"),
                         "title_ar": t.get("title_ar"), "unit_printed": t.get("unit_printed"), "sheet": t.get("sheet"),
                         "pages_pdf": json.dumps(pages if isinstance(pages, list) else [pages]) if pages else None})
-        stations = yaml.safe_load(ed.read_text()).get("station_pages")
+        cfg = yaml.safe_load(ed.read_text())
+        stations = cfg.get("station_pages")
+        for key, table_no, title, pages in (
+                ("peak_day_curve", "peak-day-load", "System loads on the day of the yearly peak (half-hourly)", lambda c: [c["page"]]),
+                ("daily_load", "daily-load", "System availability capacity, plant on bars and peak & minimum load (daily)", lambda c: c["pages"]),
+                ("daily_compare", "daily-load-compare", "Comparative maximum & minimum loads, this year and last (daily)", lambda c: [c["page"]])):
+            if key in cfg:
+                out.append({"source_id": s["id"], "table_no": table_no, "title_en": title, "title_ar": None,
+                            "unit_printed": "MW", "sheet": None, "pages_pdf": json.dumps(pages(cfg[key]))})
         if stations:
             out.append({"source_id": s["id"], "table_no": "station-units", "title_en": "Station pages: units, date of commissioning and installed capacity",
                         "title_ar": None, "unit_printed": "MW", "sheet": None,

@@ -106,3 +106,8 @@ tables:
   - variable: sent_out_net_total
     level: national
     label: Total Net Export
+
+# Comparative maximum & minimum loads (MW) and maximum temperature, this year and last,
+# one row per day (extract/mew_load.py). This book has no availability/peak-time table.
+daily_compare:
+  page: 9

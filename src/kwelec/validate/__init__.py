@@ -166,7 +166,7 @@ def run(obs_csv: Path, out: Path, registry: Path, config: Path) -> int:
         r = o.r
         return (r["variable"], r["level"], r["plant_id"], r["sector_id"], r["fuel"], r["unit_group"],
                 r["period_start"], r["period_end"], r["frequency"],
-                r["row_label"] if r["level"] == "unit" else "")
+                r["row_label"] if r["level"] == "unit" else "", r["observed_at"] if r["frequency"] == "instant" else "")
 
     same = defaultdict(list)
     for o in rows:

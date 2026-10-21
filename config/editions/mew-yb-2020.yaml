@@ -362,3 +362,11 @@ station_pages:
   pages:
   - 50
   total_printed: '1540'
+
+# Half-hourly system load on the day of the yearly peak (extract/mew_load.py). The peak
+# is this edition's printed peak for 2020 (capacity/load history table).
+peak_day_curve:
+  page: 77
+  date: 2020-07-30
+  title_printed: "Yearly Peak Load) on 30th Of July 2020"
+  peak_printed: "14960"

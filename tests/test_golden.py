@@ -23,6 +23,11 @@ GOLDEN = [
     ("mew-yb-2023", "station-units", "unit_capacity", "zour-south", "2023-01-01", "280 MW"),
     ("mew-yb-2023", "station-units", "unit_commissioning_year", "shuaiba-south", "2023-01-01", "07/ 06/ 1970"),
     ("mew-yb-2020", "station-units", "unit_commissioning_year", "zour-north", "2020-01-01", "26 / 11/ 2016**"),
+    ("mew-yb-2023", "peak-day-load", "system_load", None, "2023-08-02T13:30:00+03:00", "16940"),
+    ("mew-yb-2022", "peak-day-load", "system_load", None, "2022-08-10T00:00:00+03:00", "13740"),   # the closing 0:00 row
+    ("mew-mb-2025-07", "daily-load", "peak_load_time", None, "2025-07-14", "13:30"),
+    ("mew-mb-2025-07", "daily-load", "humidity_at_peak", None, "2025-07-01", "11%"),
+    ("mew-mb-2025-05", "daily-load-compare", "max_load", None, "2024-05-01", "10260"),
 ]
 
 
@@ -30,6 +35,6 @@ def test_golden_values():
     rows = list(csv.DictReader(OBS.open()))
     for sid, tno, var, plant, p0, printed in GOLDEN:
         hits = [r for r in rows if r["source_id"] == sid and r["table_no"] == tno and r["variable"] == var
-                and (r["plant_id"] or None) == plant and r["period_start"] == p0
-                and r["frequency"] in ("annual", "monthly") and r["row_label"] not in ("Sub Total", "SubTotal")]
+                and (r["plant_id"] or None) == plant and p0 in (r["period_start"], r["observed_at"])
+                and r["frequency"] in ("annual", "monthly", "daily", "instant") and r["row_label"] not in ("Sub Total", "SubTotal")]
         assert printed in [r["value_printed"] for r in hits], (sid, tno, var, plant, p0, [r["value_printed"] for r in hits])

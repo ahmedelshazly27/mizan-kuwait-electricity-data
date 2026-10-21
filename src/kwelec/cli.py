@@ -76,7 +76,7 @@ def _write(path: Path, rows: list[dict], fields: list[str]) -> None:
 
 
 def cmd_extract(args) -> int:
-    from .extract import csb_env, mew_text, mew_units, undata
+    from .extract import csb_env, mew_load, mew_text, mew_units, undata
     from .records import FIELDS
 
     obs = []
@@ -90,6 +90,7 @@ def cmd_extract(args) -> int:
             cfg = yaml.safe_load((CONFIG / "editions" / f"{s['id']}.yaml").read_text())
             obs += mew_text.extract(path, cfg)
             obs += mew_units.extract(path, cfg)
+            obs += mew_load.extract(path, cfg)
         elif s["id"].startswith("undata-"):
             obs += undata.extract(path, s["id"], REGISTRY)
         print(f"{s['id']:22} {sum(o.source_id == s['id'] for o in obs):6} cells")

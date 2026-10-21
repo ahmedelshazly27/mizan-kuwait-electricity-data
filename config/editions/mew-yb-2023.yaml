@@ -370,3 +370,11 @@ station_pages:
   pages:
   - 51
   total_printed: '70'
+
+# Half-hourly system load on the day of the yearly peak (extract/mew_load.py). The peak
+# is this edition's printed peak for 2023 (capacity/load history table).
+peak_day_curve:
+  page: 76
+  date: 2023-08-02
+  title_printed: "Yearly Peak Load) on 2nd Of August 2023"
+  peak_printed: "16940"

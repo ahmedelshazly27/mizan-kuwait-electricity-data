@@ -370,3 +370,11 @@ station_pages:
   pages:
   - 53
   total_printed: '1632'
+
+# Half-hourly system load on the day of the yearly peak (extract/mew_load.py). The peak
+# is this edition's printed peak for 2022 (capacity/load history table).
+peak_day_curve:
+  page: 80
+  date: 2022-08-09
+  title_printed: "Yearly Peak Load) on 9th Of August 2022"
+  peak_printed: "16180"

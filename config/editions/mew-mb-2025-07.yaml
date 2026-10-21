@@ -110,3 +110,8 @@ tables:
   - variable: sent_out_net_total
     level: national
     label: Total Net Export
+
+# System availability capacity, plant on bars and peak & minimum load, one row per day
+# (extract/mew_load.py). The printed Max. and Min. rows are checks, not data.
+daily_load:
+  pages: [9, 10]
