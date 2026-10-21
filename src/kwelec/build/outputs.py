@@ -17,10 +17,19 @@ import yaml
 
 REPO = "ahmedelshazly27/mizan-kuwait-electricity-data"
 SOURCES_RELEASE = "sources-2026-10-21"
+# Set to True once scripts/release-sources.sh has published the release, so the
+# outputs and the page link to archived copies that exist.
+ARCHIVE_PUBLISHED = False
 
 
-def archive_url(file: str) -> str:
-    return f"https://github.com/{REPO}/releases/download/{SOURCES_RELEASE}/{file}"
+def archive_url(file: str) -> str | None:
+    return f"https://github.com/{REPO}/releases/download/{SOURCES_RELEASE}/{file}" if ARCHIVE_PUBLISHED else None
+
+
+def _url(s: dict) -> str:
+    """Where a person can find the document (CSB files have no static URL: its listing page)."""
+    return s["fetch"].get("url") or {"csb_postback": "https://www.csb.gov.kw/Pages/Statistics?ID=44&ParentCatID=4",
+                                     "undata": "https://data.un.org/Data.aspx?d=EDATA&f=cmID:EL;crID:414"}[s["fetch"]["method"]]
 
 
 def _write(path: Path, rows: list[dict], fields: list[str]) -> None:
@@ -58,8 +67,7 @@ def build(obs_csv: Path, out: Path, web: Path, config: Path, registry: Path) -> 
     src_rows = [{**{k: s.get(k) for k in ("id", "publisher", "series", "tier", "title_en", "title_ar", "data_year",
                                            "data_month", "cover_year_printed", "issued_printed", "year_convention",
                                            "retrieved_at", "sha256", "licence_note", "note")},
-                 "url": s["fetch"].get("url") or {"csb_postback": "https://www.csb.gov.kw/Pages/Statistics?ID=44&ParentCatID=4",
-                                                  "undata": "https://data.un.org/Data.aspx?d=EDATA&f=cmID:EL;crID:414"}[s["fetch"]["method"]],
+                 "url": _url(s),
                  "archive_url": archive_url(s["file"]) if s["tier"] == "primary" else None} for s in sources]
     _write(out / "sources.csv", src_rows, list(src_rows[0]))
     tables = _tables(config, sources)
@@ -160,7 +168,8 @@ def _web(web: Path, obs: list[dict], conf: list[dict], out: Path, sources: list[
         rows = [o for o in newest.values() if pred(o)]
         return sorted(({"p": o["period_start"][:7] if o["frequency"] != "annual" else o["period_start"][:4],
                         "v": float(o["canonical_value"]) if o["canonical_value"] else None, "s": o["source_id"],
-                        "x": o["value_printed"], "c": o["id"] in in_conflict, "id": int(o["id"])} for o in rows),
+                        "x": o["value_printed"], "c": o["id"] in in_conflict, "id": int(o["id"]),
+                        "w": f"p. {o['page_pdf']}" if o["page_pdf"] else f"{o['sheet']}!{o['cell_ref']}"} for o in rows),
                       key=lambda d: d["p"])
 
     plants = [p["id"] for p in reg["plants"]["plants"] if p["kind"] in ("power_station", "renewable")]
@@ -214,7 +223,7 @@ def _web(web: Path, obs: list[dict], conf: list[dict], out: Path, sources: list[
                         "tier": s["tier"], "data_year": s.get("data_year"), "cover_year_printed": s.get("cover_year_printed"),
                         "issued_printed": s.get("issued_printed"), "sha256": s["sha256"],
                         "archive_url": archive_url(s["file"]) if s["tier"] == "primary" else None,
-                        "url": s["fetch"].get("url")} for s in sources]
+                        "url": _url(s)} for s in sources]
     data["plants"] = reg["plants"]["plants"]
     data["counts"] = {"observations": len(obs), "sources": len(sources),
                       "numbers": sum(o["value_status"] == "number" for o in obs)}

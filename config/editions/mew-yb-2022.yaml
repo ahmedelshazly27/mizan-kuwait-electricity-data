@@ -70,6 +70,7 @@ tables:
   - variable: generation_gross
     plant_id: zour-north
     label: 'Az-Zour North Station (printed: Az-Zour South)'
+    note: The printed English header says 'Az-Zour South Station' over this column (checked on the page image); the Arabic header says الزور الشمالية and the values equal the Az-Zour North monthly totals.
   - variable: generation_gross
     plant_id: sabiya
     label: Sabiya Station
@@ -319,9 +320,11 @@ tables:
   - variable: desalination_use
     plant_id: zour-south-ro
     label: Az-Zour South Station, RO
+    note: Printed header checked on the page image (2023 edition); values equal the CSB Environment workbook's RO column for the same station every month.
   - variable: desalination_use
     plant_id: doha-west-ro
     label: Doha West Station, RO
+    note: Printed header checked on the page image (2023 edition); values equal the CSB Environment workbook's RO column for the same station every month.
   - variable: sent_out_net_total
     level: national
     label: Net Export of Electrical Energy

@@ -1,0 +1,15 @@
+Source documents of the Kuwait Electricity Open Dataset, as retrieved on 2026-10-21.
+
+These files are archived here unmodified so that every value in the dataset can be
+checked against the document it came from. They belong to their publishers:
+
+  mew-yb-*.pdf, mew-mb-*.pdf  Ministry of Electricity, Water and Renewable Energy,
+                              State of Kuwait (https://www.mew.gov.kw). No licence
+                              stated; © the Ministry.
+  csb-env-*.xlsx              Central Statistical Bureau, State of Kuwait
+                              (https://www.csb.gov.kw). CSB's data use policy allows
+                              downloading and copying with copyright notices kept.
+
+The dataset built from them is a derived compilation (CC BY 4.0 for the compilation
+only). SHA256SUMS lists each file's hash; config/sources.yaml in the repository
+records where each was retrieved.

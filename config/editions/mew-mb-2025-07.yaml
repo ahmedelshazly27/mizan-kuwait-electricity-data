@@ -32,9 +32,11 @@ tables:
   - variable: generation_gross
     plant_id: doha-west
     label: Doha West Stn.
+    note: Order follows the printed English header; the Arabic header row reads in a different order in the text layer.
   - variable: generation_gross
     plant_id: zour-south
     label: Az-Zour South Stn.
+    note: Order follows the printed English header; the Arabic header row reads in a different order in the text layer.
   - variable: generation_gross
     plant_id: sabiya
     label: Sabiya Stn.
@@ -74,9 +76,11 @@ tables:
   - variable: sent_out
     plant_id: doha-west
     label: Doha West Stn.
+    note: Order follows the printed English header; the Arabic header row reads in a different order in the text layer.
   - variable: sent_out
     plant_id: zour-south
     label: Az-Zour South Stn.
+    note: Order follows the printed English header; the Arabic header row reads in a different order in the text layer.
   - variable: sent_out
     plant_id: sabiya
     label: Sabiya Stn.
@@ -102,6 +106,7 @@ tables:
   - variable: desalination_use
     plant_id: zour-south-ro
     label: Az-Zour (RO) [Az-Zour South RO in all other tables]
+    note: The monthly book prints only 'Az-Zour (RO)'; every other MEW and CSB table names the RO unit at Az-Zour South.
   - variable: sent_out_net_total
     level: national
     label: Total Net Export
