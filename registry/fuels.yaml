@@ -1,0 +1,5 @@
+fuels:
+  natural_gas: {en: Natural gas, ar: الغاز الطبيعي}
+  gas_oil:     {en: Gas oil, ar: زيت الغاز}
+  crude_oil:   {en: Crude oil, ar: النفط الخام}
+  heavy_oil:   {en: Heavy oil, ar: الزيت الثقيل}

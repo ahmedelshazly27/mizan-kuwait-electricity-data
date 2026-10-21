@@ -1,0 +1,107 @@
+# MEW Monthly Statistics Book, July 2025. Daily tables; columns follow the printed English
+# headers (left to right), checked against each page. The Max./Min. rows are derived and skipped.
+source_id: mew-mb-2025-07
+file: mew-mb-2025-07.pdf
+data_year: 2025
+data_month: 7
+tables:
+- id: generation-daily
+  table_no: null
+  page_pdf:
+  - 27
+  - 28
+  title_en: Generation of Elec. Energy (MWhr) During July 2025
+  unit_printed: MWhr
+  rows: days
+  anchor_row: 1
+  columns:
+  - role: period
+    label: Date
+  - variable: generation_gross
+    plant_id: shuwaikh
+    label: Shuwaikh Stn.
+  - variable: generation_gross
+    plant_id: shuaiba-north
+    label: Shuaiba North Stn.
+  - variable: generation_gross
+    plant_id: shuaiba-south
+    label: Shuaiba South Stn.
+  - variable: generation_gross
+    plant_id: doha-east
+    label: Doha East Stn.
+  - variable: generation_gross
+    plant_id: doha-west
+    label: Doha West Stn.
+  - variable: generation_gross
+    plant_id: zour-south
+    label: Az-Zour South Stn.
+  - variable: generation_gross
+    plant_id: sabiya
+    label: Sabiya Stn.
+  - variable: generation_gross
+    plant_id: zour-north
+    label: Az-Zour North Stn.
+  - variable: generation_gross
+    plant_id: shagaya
+    label: SGRE
+  - variable: generation_gross
+    level: national
+    label: Total
+- id: export-daily
+  table_no: null
+  page_pdf:
+  - 43
+  - 44
+  title_en: Export of Elec. Energy (MWhr) During July 2025
+  unit_printed: MWhr
+  rows: days
+  anchor_row: 1
+  columns:
+  - role: period
+    label: Date
+  - variable: sent_out
+    plant_id: shuwaikh
+    label: Shuwaikh Stn.
+  - variable: sent_out
+    plant_id: shuaiba-north
+    label: Shuaiba North Stn.
+  - variable: sent_out
+    plant_id: shuaiba-south
+    label: Shuaiba South Stn.
+  - variable: sent_out
+    plant_id: doha-east
+    label: Doha East Stn.
+  - variable: sent_out
+    plant_id: doha-west
+    label: Doha West Stn.
+  - variable: sent_out
+    plant_id: zour-south
+    label: Az-Zour South Stn.
+  - variable: sent_out
+    plant_id: sabiya
+    label: Sabiya Stn.
+  - variable: sent_out
+    plant_id: zour-north
+    label: Az-Zour North Stn.
+  - variable: sent_out
+    plant_id: shagaya
+    label: SGRE
+  - variable: sent_out
+    level: national
+    label: Total
+  - variable: desalination_use
+    plant_id: shuwaikh-boilers
+    unit_group: Shuwaikh distilled water production
+    label: Units Cons.by Shuwaikh Stn.
+  - variable: desalination_use
+    plant_id: shuwaikh-ro
+    label: Shuwaikh (RO)
+  - variable: desalination_use
+    plant_id: doha-west-ro
+    label: Doha West (RO)
+  - variable: desalination_use
+    plant_id: zour-south-ro
+    label: Az-Zour (RO) [Az-Zour South RO in all other tables]
+  - variable: sent_out_net_total
+    level: national
+    label: Total Net Export

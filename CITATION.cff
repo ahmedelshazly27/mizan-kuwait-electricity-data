@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below, and cite the original publishers (see SOURCES.md)."
+title: "Kuwait Electricity Open Dataset"
+type: dataset
+authors:
+  - name: "Mizan Energy"
+    website: "https://mizan-energy.com"
+repository-code: "https://github.com/ahmedelshazly27/mizan-kuwait-electricity-data"
+url: "https://mizan-energy.com/research/kuwait-electricity-data/"
+license: CC-BY-4.0
+version: "0.1.0"
+date-released: "2026-10-21"
+keywords:
+  - Kuwait
+  - electricity
+  - power generation
+  - installed capacity
+  - peak load
+  - open data
+abstract: >-
+  Every electricity value extracted from the statistical publications of Kuwait's
+  Ministry of Electricity, Water and Renewable Energy (yearbooks 2020-2023, monthly
+  books May-July 2025) and Central Statistical Bureau (Environment Statistics
+  2013-2024), one row per printed cell with full provenance, plus UNdata consumption
+  by sector as a separate secondary table. Missing values are not filled; disagreements
+  between documents are recorded, not resolved.

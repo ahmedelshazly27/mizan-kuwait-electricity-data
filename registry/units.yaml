@@ -1,0 +1,22 @@
+# Unit as printed -> canonical unit and exact factor. Only definitional factors;
+# a printed unit not listed here fails the build rather than being guessed.
+units:
+  "MW/H":            {canonical: MWh, factor: 1, note: "CSB prints MW/H; the Arabic title says ميجا واط/ساعة (megawatt-hour)"}
+  "MWh":             {canonical: MWh, factor: 1}
+  "MWhr":            {canonical: MWh, factor: 1}
+  "Million Wh":      {canonical: MWh, factor: 1}
+  "Million kWh":     {canonical: MWh, factor: 1000}
+  "GWh":             {canonical: MWh, factor: 1000}
+  "MW":              {canonical: MW, factor: 1}
+  "T.C.F":           {canonical: thousand_cubic_feet, factor: 1, note: "CSB prints T.C.F; the Arabic title says بالألف قدم مكعب (thousand cubic feet)"}
+  "'000 SCF":        {canonical: thousand_cubic_feet, factor: 1}
+  "Barrel":          {canonical: barrel, factor: 1}
+  "year":            {canonical: year, factor: 1}
+  "Million WH":      {canonical: MWh, factor: 1, note: "MEW prints Million WH / Million Wh (= megawatt-hour)"}
+  "M.Whr":           {canonical: MWh, factor: 1}
+  "%":               {canonical: percent, factor: 1}
+  "ºC":              {canonical: degC, factor: 1}
+  "date":            {canonical: text, factor: null}
+  "M.kWh":           {canonical: MWh, factor: 1000}
+  "M. kWh":          {canonical: MWh, factor: 1000}
+  "Kilowatt-hours, million": {canonical: MWh, factor: 1000}

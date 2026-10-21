@@ -1,0 +1,276 @@
+# Disagreements between printed values, found by `kwelec validate`. Every one stays
+# open until the owner decides; until then the dataset publishes all the values with
+# their provenance and marks the key as in conflict. Nothing is averaged or chosen.
+# A conflict that appears in a run but is not listed here fails the validation.
+groups:
+  A: 'MEW 2021 edition: the capacity table''s Total column is shifted by a year in some rows (e.g. 2019 prints 18,793, which is 2018''s total; the station columns are unshifted and sum to the other editions''
+    totals). Checked on the PDF text layer and bounding boxes.'
+  B: CSB Environment Statistics plant capacities for 2020–2022 repeat older MEW values (Sabiya 6,746.7, Az-Zour South 5,805.8, Az-Zour North 1,540 MW) while MEW's own books for those years print the newer
+    capacities.
+  C: CSB monthly workbooks (summed in the sheet) and MEW's yearbook history tables differ slightly for the same plant-year or national total (generally under 0.3%). CSB cites MEW as its source.
+  D: MEW 2020 edition prints national generation for 2020 as 74,756.3 (history table) and * 74,757 (energy table), and the monthly table sums to 74,756,807 MWh; the later editions print 74,757.
+conflicts:
+- id: 6406e2498b
+  group: A
+  key: installed_capacity national 1992-01-01..1992-12-31 annual
+  values: 6069 / 6898 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: e892355faa
+  group: A
+  key: installed_capacity national 1998-01-01..1998-12-31 annual
+  values: 6898 / 7414 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 0cdd7b7b37
+  group: A
+  key: installed_capacity national 1999-01-01..1999-12-31 annual
+  values: 7414 / 8289 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 321de02a5f
+  group: A
+  key: installed_capacity national 2019-01-01..2019-12-31 annual
+  values: 18793 / 19673 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 2ae0808347
+  group: B
+  key: installed_capacity sabiya 2020-01-01..2020-12-31 annual
+  values: 6746.7 / 7046.7 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 29218597d2
+  group: B
+  key: installed_capacity zour-south 2020-01-01..2020-12-31 annual
+  values: 5805.8 / 6055.8 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 9ee402197d
+  group: C
+  key: generation_gross sabiya 2013-01-01..2013-12-31 annual
+  values: 20492500.0 / 20493315 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 203e2a20fd
+  group: C
+  key: generation_gross national 2014-01-01..2014-12-31 annual
+  values: 65137204.6 / 65140000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 34ba1432bc
+  group: C
+  key: generation_gross sabiya 2014-01-01..2014-12-31 annual
+  values: 20439437.3 / 20442000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: ac973cce2e
+  group: C
+  key: generation_gross national 2015-01-01..2015-12-31 annual
+  values: 68288000 / 68291899 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 7ab4c3bc9f
+  group: C
+  key: generation_gross zour-south 2015-01-01..2015-12-31 annual
+  values: 21443000 / 21446457 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: b61abf05fc
+  group: C
+  key: generation_gross national 2016-01-01..2016-12-31 annual
+  values: 70085000 / 70094358 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 7325c3eade
+  group: C
+  key: generation_gross zour-north 2016-01-01..2016-12-31 annual
+  values: 5680389 / 5681000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 7e2074dd14
+  group: C
+  key: generation_gross doha-west 2016-01-01..2016-12-31 annual
+  values: 10546499 / 10547000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 36a64ff333
+  group: C
+  key: generation_gross shuaiba-south 2016-01-01..2016-12-31 annual
+  values: 3745000 / 3754350 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 67866d88df
+  group: C
+  key: generation_gross shagaya 2019-01-01..2019-12-31 annual
+  values: 10926 / 11000.000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: ed5ce86a96
+  group: D
+  key: generation_gross national 2020-01-01..2020-12-31 annual
+  values: 74756300.0 / 74756807.13 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 9306cde509
+  group: C
+  key: sent_out_net_total national 2014-01-01..2014-12-31 annual
+  values: 57543000 / 57550467 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 466b493dd4
+  group: C
+  key: station_use national 2014-01-01..2014-12-31 annual
+  values: 7586737.8 / 7597000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 4341a871a0
+  group: C
+  key: sent_out_net_total national 2015-01-01..2015-12-31 annual
+  values: 60373056 / 60409000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 433978b236
+  group: C
+  key: station_use national 2015-01-01..2015-12-31 annual
+  values: 7879000 / 7918843.7 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: a18910f706
+  group: C
+  key: sent_out_net_total national 2016-01-01..2016-12-31 annual
+  values: 61916000 / 62061921 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: e5385404f4
+  group: C
+  key: station_use national 2016-01-01..2016-12-31 annual
+  values: 8168000 / 8168796 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: ca1d86e0ad
+  group: C
+  key: sent_out_net_total national 2017-01-01..2017-12-31 annual
+  values: 64867000 / 64986112 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 297731419f
+  group: B
+  key: installed_capacity zour-north 2021-01-01..2021-12-31 annual
+  values: 1540 / 1632.0 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 33d5375aca
+  group: B
+  key: installed_capacity sabiya 2021-01-01..2021-12-31 annual
+  values: 6746.7 / 7046.7 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: d7605ecd97
+  group: B
+  key: installed_capacity zour-south 2021-01-01..2021-12-31 annual
+  values: 5805.8 / 5990.8 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: b437789342
+  group: C
+  key: generation_gross national 2021-01-01..2021-12-31 annual
+  values: 80780635.2 / 80780637 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 46442b81f2
+  group: C
+  key: generation_gross zour-north 2021-01-01..2021-12-31 annual
+  values: 13251032 / 13251034 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 87bac7a5ea
+  group: C
+  key: sent_out_net_total national 2021-01-01..2021-12-31 annual
+  values: 72234250.335 / 72235000 MWh
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: eb9046831b
+  group: B
+  key: installed_capacity zour-north 2022-01-01..2022-12-31 annual
+  values: 1540 / 1632.0 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: bfff418966
+  group: B
+  key: installed_capacity sabiya 2022-01-01..2022-12-31 annual
+  values: 6746.7 / 7046.7 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null
+- id: 384eaf9ce9
+  group: B
+  key: installed_capacity zour-south 2022-01-01..2022-12-31 annual
+  values: 5805.8 / 5990.8 MW
+  status: open
+  decision: null
+  decided_by: null
+  decided_at: null

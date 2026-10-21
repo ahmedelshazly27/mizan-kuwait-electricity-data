@@ -1,0 +1,9 @@
+# mew.gov.kw only accepts legacy TLS renegotiation. This enables it for the MEW
+# download only (OPENSSL_CONF is set for that one curl call); certificates are still verified.
+openssl_conf = openssl_init
+[openssl_init]
+ssl_conf = ssl_sect
+[ssl_sect]
+system_default = system_default_sect
+[system_default_sect]
+Options = UnsafeLegacyServerConnect

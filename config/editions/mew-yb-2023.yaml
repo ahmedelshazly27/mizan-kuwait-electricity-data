@@ -1,0 +1,328 @@
+# MEW Statistical Year Book, Electrical Energy, data year 2023.
+# Columns are listed left to right as cells appear in the PDF text layer and were
+# checked by hand against the page image, the Arabic headers and, where the printed
+# English header is wrong or ambiguous, against another table (noted per column).
+source_id: mew-yb-2023
+file: mew-yb-2023.pdf
+data_year: 2023
+tables:
+- id: capacity-history
+  table_no: null
+  page_pdf: 52
+  page_printed: '51'
+  title_en: Development of Power Station's Installed Capacity ( M.W ) During 1994 - 2023
+  unit_printed: MW
+  rows: years
+  anchor_row: 2023
+  years:
+  - 1994
+  - 2023
+  columns:
+  - variable: installed_capacity
+    level: national
+    label: Total
+  - variable: installed_capacity
+    plant_id: shagaya
+    label: Shygaya Stn.
+  - variable: installed_capacity
+    plant_id: zour-north
+    label: Az-Zour North Stn.
+  - variable: installed_capacity
+    plant_id: sabiya
+    label: Sabiya Station
+  - variable: installed_capacity
+    plant_id: zour-south
+    label: Az-Zour South Stn.
+  - variable: installed_capacity
+    plant_id: doha-west
+    label: Doha West Stn.
+  - variable: installed_capacity
+    plant_id: doha-east
+    label: Doha East Stn.
+  - variable: installed_capacity
+    plant_id: shuaiba-south
+    label: Shuaiba South Stn.
+  - variable: installed_capacity
+    plant_id: shuaiba-north
+    label: Shuaiba North Stn.
+  - variable: installed_capacity
+    plant_id: shuwaikh
+    label: Shuwaikh Station
+  - role: period
+    label: Period
+- id: generation-history
+  table_no: null
+  page_pdf: 59
+  page_printed: '58'
+  title_en: Power Stations’ Generation of Electrical Energy (Million kWh) During 1994 - 2023
+  unit_printed: Million kWh
+  rows: years
+  anchor_row: 2023
+  years:
+  - 1994
+  - 2023
+  columns:
+  - variable: generation_gross
+    level: national
+    label: Total
+  - variable: generation_gross
+    plant_id: shagaya
+    label: Shygaya station
+  - variable: generation_gross
+    plant_id: zour-north
+    label: 'Az-Zour North Station (printed: Az-Zour South)'
+  - variable: generation_gross
+    plant_id: sabiya
+    label: Sabiya Station
+  - variable: generation_gross
+    plant_id: zour-south
+    label: Az-Zour South Station
+  - variable: generation_gross
+    plant_id: doha-west
+    label: Doha West Station
+  - variable: generation_gross
+    plant_id: doha-east
+    label: Doha East Station
+  - variable: generation_gross
+    plant_id: shuaiba-south
+    label: Shuaiba South Station
+  - variable: generation_gross
+    plant_id: shuaiba-north
+    label: Shuaiba North Station
+  - variable: generation_gross
+    plant_id: shuwaikh
+    label: Shuwaikh Station
+  - role: period
+    label: Period
+- id: energy-history
+  table_no: null
+  page_pdf: 62
+  page_printed: '61'
+  title_en: Electrical Energy Exported Through Ministry’s Systems
+  unit_printed: Million kWh
+  rows: years
+  anchor_row: 2023
+  years:
+  - 1994
+  - 2023
+  columns:
+  - role: skip
+    label: Load Factor % (derived by MEW)
+  - role: skip
+    label: Utilization Factor % (derived by MEW)
+  - variable: sent_out_net_total
+    level: national
+    label: Elec. Energy Exported
+    note: Printed as 'Elec. Energy Exported'; equals the Net Export grand total of the same edition's monthly net-export table (after desalination use), not the stations' total export.
+  - variable: station_use
+    level: national
+    label: Cons. by Power Stations
+  - variable: generation_gross
+    level: national
+    label: Elec. Energy Generated
+  - role: period
+    label: Period
+- id: load-history
+  table_no: null
+  page_pdf: 67
+  page_printed: '66'
+  title_en: Development of Maximum & Minimum Loads (MW) During 1994 - 2023
+  unit_printed: MW
+  rows: years
+  anchor_row: 2023
+  years:
+  - 1994
+  - 2023
+  columns:
+  - role: skip
+    label: Ratio = Min./Max. (derived by MEW)
+  - role: skip
+    label: Percentage of Annual Increase / Decrease, minimum (derived by MEW)
+  - variable: min_load
+    level: national
+    label: Minimum Load
+  - role: skip
+    label: Percentage of Annual Increase / Decrease, maximum (derived by MEW)
+  - variable: max_load
+    level: national
+    label: Maximum Load
+  - role: period
+    label: Period
+- id: peak-history
+  table_no: null
+  page_pdf: 71
+  page_printed: '70'
+  title_en: System Peak Load, Maximum Temperature
+  unit_printed: MW
+  rows: years
+  anchor_row: 2023
+  years:
+  - 1994
+  - 2023
+  columns:
+  - variable: humidity_at_peak
+    level: national
+    unit_printed: '%'
+    label: Max. Rel. Humidity at Peak Load %
+  - variable: temperature_at_peak
+    level: national
+    unit_printed: ºC
+    label: Max. Temp. at Peak Load ºC
+  - variable: peak_load_date
+    level: national
+    unit_printed: date
+    text: true
+    label: Date
+  - role: skip
+    label: Percentage of Annual Increase (derived by MEW)
+  - variable: peak_load
+    level: national
+    label: Max. Load (MW)
+  - role: period
+    label: Year
+- id: generation-monthly
+  table_no: null
+  page_pdf: 199
+  page_printed: '198'
+  title_en: Generation Of Electrical Energy (Million WH) During 2023
+  unit_printed: Million WH
+  rows: months
+  anchor_row: Total
+  columns:
+  - variable: generation_gross
+    plant_id: shuwaikh
+    label: Shuwaikh Station
+  - variable: generation_gross
+    plant_id: shuaiba-north
+    label: Shuaiba North Station
+  - variable: generation_gross
+    plant_id: shuaiba-south
+    label: Shuaiba South Station
+  - variable: generation_gross
+    plant_id: doha-east
+    label: Doha East Station
+  - variable: generation_gross
+    plant_id: doha-west
+    label: Doha West Station
+  - variable: generation_gross
+    plant_id: zour-south
+    label: Az-Zour South Station
+  - variable: generation_gross
+    plant_id: sabiya
+    label: Sabiya Station
+  - variable: generation_gross
+    plant_id: zour-north
+    label: Az-Zour North Station
+  - variable: generation_gross
+    plant_id: shagaya
+    label: Al-Shygaya Power Prod. From Sustainable Energy (Solar-Wind-CSP)
+  - variable: generation_gross
+    level: national
+    label: Total Power Stations' Generation
+- id: station-use-monthly
+  table_no: null
+  page_pdf: 205
+  page_printed: '204'
+  title_en: Auxiliary Units Consumed By Power Stations' (Million Wh) During 2023
+  unit_printed: Million Wh
+  rows: months
+  anchor_row: Total
+  columns:
+  - variable: station_use
+    plant_id: shuwaikh
+    unit_group: Boilers + G/T
+    label: Shuwaikh Station, Boilers + G/T
+  - variable: station_use
+    plant_id: shuwaikh-ro
+    label: Shuwaikh Station, Reverse Osmosis
+  - variable: station_use
+    plant_id: shuaiba-north
+    label: Shuaiba North Stn.
+  - variable: station_use
+    plant_id: shuaiba-south
+    label: Shuaiba South Stn.
+  - variable: station_use
+    plant_id: doha-east
+    label: Doha East Station
+  - variable: station_use
+    plant_id: doha-west
+    unit_group: Boilers + G/T
+    label: Doha West Station, Boilers + G/T
+  - variable: station_use
+    plant_id: doha-west-ro
+    label: Doha West Station, Reverse Osmosis
+  - variable: station_use
+    plant_id: zour-south
+    unit_group: Boilers + G/T
+    label: Az-Zour South Stn, Boilers + G/T
+  - variable: station_use
+    plant_id: zour-south-ro
+    label: Az-Zour South Stn, Reverse Osmosis
+  - variable: station_use
+    plant_id: sabiya
+    label: Sabiya Station
+  - variable: station_use
+    plant_id: zour-north
+    label: Az-Zour North
+  - variable: station_use
+    plant_id: shagaya
+    label: SGRE
+  - variable: station_use
+    level: national
+    label: Total
+- id: net-export-monthly
+  table_no: null
+  page_pdf: 214
+  page_printed: '213'
+  title_en: Net Export Of Electrical Energy (Million WH) During 2023
+  unit_printed: Million WH
+  rows: months
+  anchor_row: Total
+  columns:
+  - variable: sent_out
+    plant_id: shuwaikh
+    label: Shuwaikh Station
+  - variable: sent_out
+    plant_id: shuaiba-north
+    label: Shuaiba North Station
+  - variable: sent_out
+    plant_id: shuaiba-south
+    label: Shuaiba South Station
+  - variable: sent_out
+    plant_id: doha-east
+    label: Doha East Station
+  - variable: sent_out
+    plant_id: doha-west
+    label: Doha West Station
+  - variable: sent_out
+    plant_id: zour-south
+    label: Az-Zour South Station
+  - variable: sent_out
+    plant_id: sabiya
+    label: Sabiya Station
+  - variable: sent_out
+    plant_id: zour-north
+    label: Az-Zour North Station
+  - variable: sent_out
+    plant_id: shagaya
+    label: Al-Shygaya Power Prod. From Sustainable Energy (Solar-Wind)
+  - variable: sent_out
+    level: national
+    label: Total Power Stations' Export
+  - variable: desalination_use
+    plant_id: shuwaikh-boilers
+    unit_group: Shuwaikh distilled water production
+    label: Auxiliary Units Consumed by Shuwaikh Station for the Production of Dist.Water, Boilers
+  - variable: desalination_use
+    plant_id: shuwaikh-ro
+    unit_group: Shuwaikh distilled water production
+    label: Auxiliary Units Consumed by Shuwaikh Station for the Production of Dist.Water, RO
+  - variable: desalination_use
+    plant_id: zour-south-ro
+    label: Az-Zour South Station, RO
+  - variable: desalination_use
+    plant_id: doha-west-ro
+    label: Doha West Station, RO
+  - variable: sent_out_net_total
+    level: national
+    label: Net Export of Electrical Energy

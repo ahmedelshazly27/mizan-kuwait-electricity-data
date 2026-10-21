@@ -1,0 +1,32 @@
+"""Values read off the source pages by hand. Needs the source files (`kwelec fetch`);
+skipped without them."""
+
+import csv
+from pathlib import Path
+
+import pytest
+
+OBS = Path(__file__).resolve().parents[1] / "data" / "interim" / "observations.csv"
+pytestmark = pytest.mark.skipif(not OBS.exists(), reason="run `kwelec fetch && kwelec extract` first")
+
+GOLDEN = [
+    # source, table, variable, plant (None = national), period start, printed value
+    ("mew-yb-2023", "generation-history", "generation_gross", None, "2023-01-01", "88017"),
+    ("mew-yb-2023", "generation-history", "generation_gross", "zour-north", "2019-01-01", "13802.56"),
+    ("mew-yb-2020", "generation-history", "generation_gross", "zour-north", "2019-01-01", "13803"),
+    ("mew-yb-2023", "capacity-history", "installed_capacity", "shuaiba-south", "1994-01-01", "804+25"),
+    ("mew-yb-2021", "capacity-history", "installed_capacity", None, "2019-01-01", "18793"),   # printed as is (shifted)
+    ("mew-yb-2023", "peak-history", "peak_load_date", None, "2023-01-01", "08/02/2023"),
+    ("mew-yb-2023", "net-export-monthly", "sent_out_net_total", None, "2023-01-01", "4167053"),
+    ("csb-env-2024", "110", "generation_gross", None, "2024-01-01", "89,499,606"),
+    ("csb-env-2024", "108", "installed_capacity", "sabiya", "2024-01-01", "6885.0"),
+]
+
+
+def test_golden_values():
+    rows = list(csv.DictReader(OBS.open()))
+    for sid, tno, var, plant, p0, printed in GOLDEN:
+        hits = [r for r in rows if r["source_id"] == sid and r["table_no"] == tno and r["variable"] == var
+                and (r["plant_id"] or None) == plant and r["period_start"] == p0
+                and r["frequency"] in ("annual", "monthly") and r["row_label"] not in ("Sub Total", "SubTotal")]
+        assert printed in [r["value_printed"] for r in hits], (sid, tno, var, plant, p0, [r["value_printed"] for r in hits])

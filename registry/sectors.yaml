@@ -1,0 +1,13 @@
+# Consumption sectors as named by UNdata (secondary source; no primary source
+# publishes electricity consumption by sector for Kuwait). `parent` marks a
+# sub-sector that is already inside another row, so sums must not add both.
+sectors:
+  - {id: households, en: Households, ar: القطاع المنزلي, un: "Electricity - Consumption by households"}
+  - {id: commercial_public, en: Commercial and public services, ar: القطاع التجاري والخدمات العامة, un: "Electricity - Consumption by commercial and public services"}
+  - {id: industry, en: "Manufacturing, construction and non-fuel industry", ar: الصناعة التحويلية والتشييد, un: "Electricity - Consumption by manufacturing, construction and non-fuel industry"}
+  - {id: industry_chemical, parent: industry, en: Chemical and petrochemical, ar: الكيماويات والبتروكيماويات, un: "Electricity - Consumption by chemical and petrochemical"}
+  - {id: industry_other, parent: industry, en: "Other manufacturing, construction and non-fuel industry", ar: صناعات أخرى, un: "Electricity - Consumption by other manuf., const. and non-fuel ind."}
+  - {id: industry_nes, parent: industry, en: Industry not elsewhere specified, ar: صناعة غير محددة, un: "Electricity - Consumption not elsewhere specified (industry)"}
+  - {id: agriculture, en: "Agriculture, forestry and fishing", ar: الزراعة والغابات وصيد الأسماك, un: "Electricity - Consumption in agriculture, forestry and fishing"}
+  - {id: other, en: Other, ar: أخرى, un: "Electricity - Consumption by other"}
+  - {id: other_nes, parent: other, en: Other not elsewhere specified, ar: أخرى غير محددة, un: "Electricity - Consumption not elsewhere specified (other)"}

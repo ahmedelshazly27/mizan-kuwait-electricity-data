@@ -1,0 +1,30 @@
+# Canonical variables. A variable is what the source says it measures, not what we
+# think it should mean: CSB's "Exporting Electric Power" is energy sent out from the
+# stations to the grid, not export to another country.
+variables:
+  generation_gross:   {unit: MWh, en: Electricity generated (gross), ar: الطاقة الكهربائية المولدة}
+  station_use:        {unit: MWh, en: Electricity consumed within the stations, ar: الطاقة الكهربائية المستهلكة داخل المحطات}
+  sent_out:           {unit: MWh, en: Electricity sent out from the stations, ar: الطاقة الكهربائية المصدرة من المحطات}
+  sent_out_net_total: {unit: MWh, en: Net electricity sent out (all stations), ar: صافي الطاقة الكهربائية المصدرة}
+  installed_capacity: {unit: MW,  en: Installed capacity, ar: السعة المركبة}
+  operating_year:     {unit: year, en: First operating year as printed, ar: سنة التشغيل}
+  fuel_use:           {unit: null, en: Fuel consumed by the station (unit depends on fuel), ar: استهلاك المحطات من الوقود}
+  desalination_use:   {unit: MWh, en: Electricity used for water desalination (RO units and boilers), ar: الطاقة الكهربائية المستهلكة لتحلية المياه}
+  max_load:           {unit: MW, en: Maximum load in the year, ar: الحمل الأقصى}
+  min_load:           {unit: MW, en: Minimum load in the year, ar: الحمل الأدنى}
+  peak_load:          {unit: MW, en: System peak load, ar: الحمل الأقصى للنظام}
+  peak_load_date:     {unit: text, en: Date of the system peak as printed (format varies by row; never parsed), ar: تاريخ الحمل الأقصى}
+  temperature_at_peak: {unit: degC, en: Maximum temperature at peak load, ar: درجة الحرارة القصوى عند الحمل الأقصى}
+  humidity_at_peak:   {unit: percent, en: Maximum relative humidity at peak load, ar: الرطوبة النسبية القصوى عند الحمل الأقصى}
+  consumption:        {unit: MWh, en: Electricity consumption by sector (UNdata; secondary), ar: استهلاك الكهرباء حسب القطاع}
+  un_gross_production: {unit: MWh, en: "UNdata: gross production", ar: null}
+  un_net_production:  {unit: MWh, en: "UNdata: net production", ar: null}
+  un_own_use_power_plants: {unit: MWh, en: "UNdata: own use by electricity, heat and CHP plants", ar: null}
+  un_losses:          {unit: MWh, en: "UNdata: losses", ar: null}
+  un_imports:         {unit: MWh, en: "UNdata: imports", ar: null}
+  un_exports:         {unit: MWh, en: "UNdata: exports", ar: null}
+  un_final_consumption: {unit: MWh, en: "UNdata: final energy consumption", ar: null}
+  un_energy_industries_own_use: {unit: MWh, en: "UNdata: energy industries own use", ar: null}
+  un_own_use_refineries: {unit: MWh, en: "UNdata: own use by oil refineries", ar: null}
+  un_own_use_oil_gas: {unit: MWh, en: "UNdata: own use by oil and gas extraction", ar: null}
+  desalination_use_detail: {unit: MWh, en: "Breakdown of a desalination-use column (CSB 2018 only); not a separate deduction", ar: null}

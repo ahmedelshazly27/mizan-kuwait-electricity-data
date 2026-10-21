@@ -1,0 +1,39 @@
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1"   # weekly: are the sources unchanged, and does everything still validate?
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: { version: "0.11.32" }
+      - run: uv sync --locked
+      - run: uv run ruff check src tests
+      - run: uv run pytest -q
+
+  rebuild:
+    # Downloads every source, checks its hash, extracts and validates. Fails if a source
+    # file changed or a disagreement appears that config/conflicts.yaml does not list.
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: { version: "0.11.32" }
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: uv sync --locked
+      - run: uv run kwelec all
+      - run: uv run pytest -q
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: outputs
+          path: |
+            data/out/validation.csv
+            data/out/conflicts.csv

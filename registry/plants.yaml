@@ -1,0 +1,77 @@
+# Every spelling seen in a source maps to one id. Arabic names are copied from the
+# CSB Environment Statistics 2024 workbook (Unicode text) and still need a review by
+# hand (name_ar_reviewed). `kind`: power_station, renewable (Shagaya complex),
+# ro (electricity used by a reverse-osmosis desalination unit), boilers.
+# `seen` lists source ids where each alias was printed; filled by `kwelec registry`.
+plants:
+  - id: shuwaikh
+    kind: power_station
+    name_en: Shuwaikh
+    name_ar: الشويخ
+    aliases: [Shuwaikh, "Shuwaikh*"]
+  - id: shuaiba-north
+    kind: power_station
+    name_en: Shuaiba North
+    name_ar: الشعيبة الشمالية
+    aliases: [North Shuaiba, Nouth Shuaiba, Nourth Shuaiba, Shuaiba North, الشعيبه الشمالية]
+  - id: shuaiba-south
+    kind: power_station
+    name_en: Shuaiba South
+    name_ar: الشعيبة الجنوبية
+    aliases: [South Shuaiba, Shuaiba South, الشعيبه الجنوبية]
+  - id: doha-east
+    kind: power_station
+    name_en: Doha East
+    name_ar: الدوحة الشرقية
+    aliases: [East Doha, Doha East, DohaEast, الدوحه الشرقية]
+  - id: doha-west
+    kind: power_station
+    name_en: Doha West
+    name_ar: الدوحة الغربية
+    aliases: [Doha West, West Doha, DohaWest, Doha west, الدوحه الغربية]
+  - id: zour-south
+    kind: power_station
+    name_en: Az-Zour South
+    name_ar: الزور الجنوبية
+    aliases: [South Zour, Az-Zour South, Zour South, Al-Zour South, الزور الجنوبية]
+  - id: zour-north
+    kind: power_station
+    name_en: Az-Zour North
+    name_ar: الزور الشمالية
+    aliases: [North Zour, Az-Zour North, Zour North, Az-zour North, الزور الشمالية]
+  - id: sabiya
+    kind: power_station
+    name_en: Sabiya
+    name_ar: الصبية
+    aliases: [Sabeya, Sabiya, Subiya, sabiya, الصبية]
+  - id: shagaya
+    kind: renewable
+    name_en: Shagaya
+    name_ar: الشقايا
+    aliases: [Shygaya, Shagaya, SHYGAYA, "*Al-Shygaya Power Prod. From sustainable Energy (solar-wind-CSP)",
+              "***Al-Shygaya Power Prod. From sustainable Energy (solar-wind-CSP)", الشقايا,
+              استهلاك الشقايا من الطاقة المتجددة]
+  - id: shuwaikh-ro
+    kind: ro
+    parent: shuwaikh
+    name_en: Shuwaikh (RO)
+    name_ar: الشويخ (التناضح العكسي)
+    aliases: [Shuwaikh (RO), "Shuwaikh (RO)**", "Shuwaikh (RO)*"]
+  - id: shuwaikh-boilers
+    kind: boilers
+    parent: shuwaikh
+    name_en: Shuwaikh boilers
+    name_ar: الشويخ (الغلايات)
+    aliases: [Boilers]
+  - id: doha-west-ro
+    kind: ro
+    parent: doha-west
+    name_en: Doha West (RO)
+    name_ar: الدوحة الغربية (التناضح العكسي)
+    aliases: [Doha West (RO), "Doha West (RO)**"]
+  - id: zour-south-ro
+    kind: ro
+    parent: zour-south
+    name_en: Az-Zour South (RO)
+    name_ar: الزور الجنوبية (التناضح العكسي)
+    aliases: [South Zour (RO), "South Zour (RO)**"]

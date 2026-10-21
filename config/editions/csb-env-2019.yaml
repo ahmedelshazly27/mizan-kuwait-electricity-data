@@ -1,0 +1,651 @@
+source_id: csb-env-2019
+file: csb-env-2019.xlsx
+data_year: 2019
+tables:
+- table_no: '110'
+  sheet: معلومات محطات القوى الكهربائية
+  title_en: Information About Electric Power Stations
+  title_ar: معلومات عن محطات القوى الكهربائية
+  year_printed: 2019
+  layout: plant_list
+  rows:
+  - row: 7
+    plant_id: shuwaikh
+    labels:
+    - الشويخ
+    - Shuwaikh
+  - row: 9
+    plant_id: shuaiba-north
+    labels:
+    - الشعيبه الشمالية
+    - North Shuaiba
+  - row: 11
+    plant_id: shuaiba-south
+    labels:
+    - الشعيبه الجنوبية
+    - South Shuaiba
+  - row: 13
+    plant_id: doha-east
+    labels:
+    - الدوحه الشرقية
+    - East Doha
+  - row: 15
+    plant_id: doha-west
+    labels:
+    - الدوحه الغربية
+    - Doha West
+  - row: 17
+    plant_id: zour-south
+    labels:
+    - الزور الجنوبية
+    - South Zour
+  - row: 19
+    plant_id: zour-north
+    labels:
+    - الزور الشمالية
+    - North Zour
+  - row: 21
+    plant_id: sabiya
+    labels:
+    - الصبية
+    - Sabeya
+  - row: 23
+    plant_id: shagaya
+    labels:
+    - الشقايا
+    - Shygaya
+  columns:
+    C:
+      variable: operating_year
+      header:
+      - سنة التشغيل
+      - Operating Year
+      unit_printed: year
+    E:
+      variable: installed_capacity
+      header:
+      - السعة الاجمالية (ميجا واط)
+      - Total Capacity (MW)
+      unit_printed: MW
+    F:
+      variable: notes
+      header:
+      - ملاحظات
+      - Notes
+      unit_printed: null
+- table_no: '112'
+  sheet: الطاقة الكهربائية المولدة
+  title_en: Electric Power Generated from Electrical Power Stations (MW/H) by Month and Station
+  title_ar: الطاقة الكهربائية المولدة من محطات القوى الكهربائية (ميجا واط/ساعة) حسب الشهر والمحطة
+  year_printed: 2019
+  layout: monthly
+  variable: generation_gross
+  fuel: null
+  unit_printed: MW/H
+  label_col: C
+  header_rows:
+  - 5
+  - 7
+  columns:
+    D:
+      header:
+      - المحطة
+      - الشويخ
+      - Shuwaikh
+      level: plant
+      plant_id: shuwaikh
+    E:
+      header:
+      - الشعيبه الشمالية
+      - North Shuaiba
+      level: plant
+      plant_id: shuaiba-north
+    F:
+      header:
+      - الشعيبه الجنوبية
+      - South Shuaiba
+      level: plant
+      plant_id: shuaiba-south
+    G:
+      header:
+      - الدوحه الشرقية
+      - East Doha
+      level: plant
+      plant_id: doha-east
+    H:
+      header:
+      - Station
+      - الدوحه الغربية
+      - Doha West
+      level: plant
+      plant_id: doha-west
+    I:
+      header:
+      - الزور الجنوبية
+      - South Zour
+      level: plant
+      plant_id: zour-south
+    J:
+      header:
+      - الصبية
+      - Sabeya
+      level: plant
+      plant_id: sabiya
+    K:
+      header:
+      - الزور الشمالية
+      - North Zour
+      level: plant
+      plant_id: zour-north
+    L:
+      header:
+      - '*إنتاج محطة الشقايا من الطاقة المتجددة (شمسية-رياح-شمسية مركزة)'
+      - '*Al-Shygaya Power Prod. From sustainable Energy (solar-wind-CSP)'
+      level: plant
+      plant_id: shagaya
+    M:
+      header:
+      - الإجمالي
+      - Total
+      level: national
+      plant_id: null
+- table_no: '113'
+  sheet: الطاقة الكهربائية المستهلكة
+  title_en: Electrical Energy Consumed within the Stations (MW/H) by Month and Station
+  title_ar: الطاقة الكهربائية المستهلكة داخل المحطات (ميجا واط/ساعة) حسب الشهر والمحطة
+  year_printed: 2019
+  layout: monthly
+  variable: station_use
+  fuel: null
+  unit_printed: MW/H
+  label_col: C
+  header_rows:
+  - 5
+  - 7
+  columns:
+    D:
+      header:
+      - المحطة
+      - الشويخ
+      - Shuwaikh
+      level: plant
+      plant_id: shuwaikh
+    E:
+      header:
+      - الشويخ (RO)
+      - Shuwaikh (RO)
+      level: plant
+      plant_id: shuwaikh-ro
+    F:
+      header:
+      - الشعيبه الشمالية
+      - Nouth Shuaiba
+      level: plant
+      plant_id: shuaiba-north
+    G:
+      header:
+      - الشعيبه الجنوبية
+      - South Shuaiba
+      level: plant
+      plant_id: shuaiba-south
+    H:
+      header:
+      - الدوحه الشرقية
+      - East Doha
+      level: plant
+      plant_id: doha-east
+    I:
+      header:
+      - Station
+      - الدوحه الغربية
+      - Doha West
+      level: plant
+      plant_id: doha-west
+    J:
+      header:
+      - الدوحه الغربية (RO)
+      - Doha West (RO)
+      level: plant
+      plant_id: doha-west-ro
+    K:
+      header:
+      - الزور الجنوبية
+      - South Zour
+      level: plant
+      plant_id: zour-south
+    L:
+      header:
+      - الزور الجنوبية (RO)
+      - South Zour (RO)
+      level: plant
+      plant_id: zour-south-ro
+    M:
+      header:
+      - الصبية
+      - Sabeya
+      level: plant
+      plant_id: sabiya
+    N:
+      header:
+      - الزور الشمالية
+      - North Zour
+      level: plant
+      plant_id: zour-north
+    O:
+      header:
+      - الإجمالي
+      - Total
+      level: national
+      plant_id: null
+- table_no: '114'
+  sheet: الطاقة الكهربائية ا لمصدرة
+  title_en: Exporting Electric Power from Electrical Power Stations (MW/H) by Month and Station
+  title_ar: الطاقة الكهربائية المصدرة من محطات القوى الكهربائية (ميجا واط/ساعة) حسب الشهر والمحطة
+  year_printed: 2019
+  layout: monthly
+  variable: sent_out
+  fuel: null
+  unit_printed: MW/H
+  label_col: C
+  header_rows:
+  - 5
+  - 8
+  columns:
+    D:
+      header:
+      - الوحدات الكهربائية المستهلكة داخل محطة الشويخ لانتاج المياه المقطرة* Consumed Electrical Units in Shuwaikh Distilled Water Production Plant
+      - الشويخ (RO)
+      - Shuwaikh (RO)
+      level: plant
+      plant_id: shuwaikh-ro
+      variable: desalination_use
+      unit_group: Shuwaikh distilled water production plant
+    E:
+      header:
+      - الغلايات
+      - Boilers
+      level: plant
+      plant_id: shuwaikh-boilers
+      variable: desalination_use
+    F:
+      header:
+      - المحطة
+      - '*الشويخ'
+      - Shuwaikh*
+      level: plant
+      plant_id: shuwaikh
+    G:
+      header:
+      - الشعيبه الشمالية
+      - North Shuaiba
+      level: plant
+      plant_id: shuaiba-north
+    H:
+      header:
+      - الشعيبه الجنوبية
+      - South Shuaiba
+      level: plant
+      plant_id: shuaiba-south
+    I:
+      header:
+      - الدوحه الشرقية
+      - East Doha
+      level: plant
+      plant_id: doha-east
+    J:
+      header:
+      - Station
+      - الدوحه الغربية
+      - Doha West
+      level: plant
+      plant_id: doha-west
+    K:
+      header:
+      - الدوحه الغربية **(RO)
+      - Doha West (RO)**
+      level: plant
+      plant_id: doha-west-ro
+      variable: desalination_use
+    L:
+      header:
+      - الزور الجنوبية
+      - South Zour
+      level: plant
+      plant_id: zour-south
+    M:
+      header:
+      - الزور الجنوبية **(RO)
+      - South Zour (RO)**
+      level: plant
+      plant_id: zour-south-ro
+      variable: desalination_use
+    N:
+      header:
+      - الصبية
+      - Sabeya
+      level: plant
+      plant_id: sabiya
+    O:
+      header:
+      - الزور الشمالية
+      - North Zour
+      level: plant
+      plant_id: zour-north
+    P:
+      header:
+      - '***إنتاج محطة الشقايا من الطاقة المتجددة (شمسية-رياح-شمسية مركزة)'
+      - '***Al-Shygaya Power Prod. From sustainable Energy (solar-wind-CSP)'
+      level: plant
+      plant_id: shagaya
+    Q:
+      header:
+      - الإجمالي
+      - Total
+      level: national
+      plant_id: null
+      variable: sent_out_net_total
+      note: Printed as 'Total'; it equals the stations' export plus the negative desalination columns, i.e. net sent out (checked by the net_sent_out validation).
+- table_no: '118'
+  sheet: استهلاك ا لمحطات من الغاز
+  title_en: Consumption of Natural Gas Stations in (T.C.F) by Month and Station
+  title_ar: استهلاك المحطات من الغاز الطبيعى (بالألف قدم مكعب) حسب الشهر والمحطة
+  year_printed: 2019
+  layout: monthly
+  variable: fuel_use
+  fuel: natural_gas
+  unit_printed: T.C.F
+  label_col: C
+  header_rows:
+  - 5
+  - 7
+  columns:
+    D:
+      header:
+      - المحطة
+      - الشويخ
+      - Shuwaikh
+      level: plant
+      plant_id: shuwaikh
+    E:
+      header:
+      - الشويخ (RO)
+      - Shuwaikh (RO)
+      level: plant
+      plant_id: shuwaikh-ro
+    F:
+      header:
+      - الشعيبة الشمالية
+      - Nourth Shuaiba
+      level: plant
+      plant_id: shuaiba-north
+    G:
+      header:
+      - الشعيبة الجنوبية
+      - South Shuaiba
+      level: plant
+      plant_id: shuaiba-south
+    H:
+      header:
+      - الدوحه الشرقية
+      - East Doha
+      level: plant
+      plant_id: doha-east
+    I:
+      header:
+      - Station
+      - الدوحه الغربية
+      - West Doha
+      level: plant
+      plant_id: doha-west
+    J:
+      header:
+      - الزور الجنوبية
+      - South Zour
+      level: plant
+      plant_id: zour-south
+    K:
+      header:
+      - الزور الجنوبية (RO)
+      - South Zour (RO)
+      level: plant
+      plant_id: zour-south-ro
+    L:
+      header:
+      - الصبية
+      - Sabeya
+      level: plant
+      plant_id: sabiya
+    M:
+      header:
+      - الزور الشمالية
+      - North Zour
+      level: plant
+      plant_id: zour-north
+    N:
+      header:
+      - الإجمالي
+      - Total
+      level: national
+      plant_id: null
+- table_no: '119'
+  sheet: استهلاك المحطات من زيت الغاز
+  title_en: Stations Consumption of Gas Oil (Barrel) by Month and Station
+  title_ar: استهلاك المحطات من زيت الغاز (برميل) حسب الشهر والمحطة
+  year_printed: 2019
+  layout: monthly
+  variable: fuel_use
+  fuel: gas_oil
+  unit_printed: Barrel
+  label_col: C
+  header_rows:
+  - 5
+  - 7
+  columns:
+    D:
+      header:
+      - المحطة
+      - الشويخ
+      - Shuwaikh
+      level: plant
+      plant_id: shuwaikh
+    E:
+      header:
+      - الشويخ (RO)
+      - Shuwaikh (RO)
+      level: plant
+      plant_id: shuwaikh-ro
+    F:
+      header:
+      - الشعيبة الشمالية
+      - Nourth Shuaiba
+      level: plant
+      plant_id: shuaiba-north
+    G:
+      header:
+      - الشعيبة الجنوبية
+      - South Shuaiba
+      level: plant
+      plant_id: shuaiba-south
+    H:
+      header:
+      - الدوحه الشرقية
+      - East Doha
+      level: plant
+      plant_id: doha-east
+    I:
+      header:
+      - Station
+      - الدوحه الغربية
+      - West Doha
+      level: plant
+      plant_id: doha-west
+    J:
+      header:
+      - الزور الجنوبية
+      - South Zour
+      level: plant
+      plant_id: zour-south
+    K:
+      header:
+      - الزور الجنوبية (RO)
+      - South Zour (RO)
+      level: plant
+      plant_id: zour-south-ro
+    L:
+      header:
+      - الصبية
+      - Sabeya
+      level: plant
+      plant_id: sabiya
+    M:
+      header:
+      - الزور الشمالية
+      - North Zour
+      level: plant
+      plant_id: zour-north
+    N:
+      header:
+      - الإجمالي
+      - Total
+      level: national
+      plant_id: null
+- table_no: '120'
+  sheet: استهلاك المحطات من النفط الخام
+  title_en: Consumption of Crude Oil (Barrel) by Month and Station
+  title_ar: استهلاك المحطات من النفط الخام (برميل) حسب الشهر والمحطة
+  year_printed: 2019
+  layout: monthly
+  variable: fuel_use
+  fuel: crude_oil
+  unit_printed: Barrel
+  label_col: C
+  header_rows:
+  - 5
+  - 7
+  columns:
+    D:
+      header:
+      - المحطة
+      - الشويخ
+      - Shuwaikh
+      level: plant
+      plant_id: shuwaikh
+    E:
+      header:
+      - الشويخ (RO)
+      - Shuwaikh (RO)
+      level: plant
+      plant_id: shuwaikh-ro
+    F:
+      header:
+      - الشعيبة الشمالية
+      - Nourth Shuaiba
+      level: plant
+      plant_id: shuaiba-north
+    G:
+      header:
+      - الشعيبة الجنوبية
+      - South Shuaiba
+      level: plant
+      plant_id: shuaiba-south
+    H:
+      header:
+      - Station
+      - الدوحه الشرقية
+      - East Doha
+      level: plant
+      plant_id: doha-east
+    I:
+      header:
+      - الدوحه الغربية
+      - West Doha
+      level: plant
+      plant_id: doha-west
+    J:
+      header:
+      - الزور الجنوبية
+      - South Zour
+      level: plant
+      plant_id: zour-south
+    K:
+      header:
+      - الصبية
+      - Sabeya
+      level: plant
+      plant_id: sabiya
+    L:
+      header:
+      - الإجمالي
+      - Total
+      level: national
+      plant_id: null
+- table_no: '121'
+  sheet: استهلاك المحطات من الزيت الثقيل
+  title_en: Stations Consumption of Heavy Oil (Barrel) by Month and Station
+  title_ar: استهلاك المحطات من الزيت الثقيل (برميل) حسب الشهر والمحطة
+  year_printed: 2019
+  layout: monthly
+  variable: fuel_use
+  fuel: heavy_oil
+  unit_printed: Barrel
+  label_col: C
+  header_rows:
+  - 5
+  - 7
+  columns:
+    D:
+      header:
+      - المحطة
+      - الشويخ
+      - Shuwaikh
+      level: plant
+      plant_id: shuwaikh
+    E:
+      header:
+      - الشويخ (RO)
+      - Shuwaikh (RO)
+      level: plant
+      plant_id: shuwaikh-ro
+    F:
+      header:
+      - الشعيبة الشمالية
+      - Nourth Shuaiba
+      level: plant
+      plant_id: shuaiba-north
+    G:
+      header:
+      - الشعيبة الجنوبية
+      - South Shuaiba
+      level: plant
+      plant_id: shuaiba-south
+    H:
+      header:
+      - Station
+      - الدوحه الشرقية
+      - East Doha
+      level: plant
+      plant_id: doha-east
+    I:
+      header:
+      - الدوحه الغربية
+      - West Doha
+      level: plant
+      plant_id: doha-west
+    J:
+      header:
+      - الزور الجنوبية
+      - South Zour
+      level: plant
+      plant_id: zour-south
+    K:
+      header:
+      - الصبية
+      - Sabeya
+      level: plant
+      plant_id: sabiya
+    L:
+      header:
+      - الإجمالي
+      - Total
+      level: national
+      plant_id: null

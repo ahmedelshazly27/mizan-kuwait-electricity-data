@@ -1,0 +1,402 @@
+# Every document the dataset uses. `sha256` is of the file as retrieved; a later
+# retrieval with a different hash is a new version and is reported, never silently used.
+sources:
+- id: mew-yb-2020
+  publisher: MEW
+  series: Statistical Year Book – Electrical Energy
+  tier: primary
+  title_en: 'Statistical Year Book: Electrical Energy 2020'
+  title_ar: كتاب الإحصاء السنوي – الطاقة الكهربائية 2020
+  data_year: 2020
+  cover_year_printed: 2020 (stylised as "20 20")
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/dm3dwvt0/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D8%AD%D8%B5%D8%A7%D8%A1-%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1-compressed.pdf
+    legacy_tls: true
+  file: mew-yb-2020.pdf
+  sha256: 164aebc926946f1f7504fd05dd7da63c25dc903fe815e228a00be01505820e82
+  retrieved_at: '2026-10-21'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+- id: mew-yb-2021
+  publisher: MEW
+  series: Statistical Year Book – Electrical Energy
+  tier: primary
+  title_en: 'Statistical Year Book: Electrical Energy 2021'
+  title_ar: كتاب الإحصاء السنوي – الطاقة الكهربائية 2021
+  data_year: 2021
+  cover_year_printed: '2021'
+  issued_printed: '2022'
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/av5dglm5/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D8%AD%D8%B5%D8%A7%D8%A1-%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A-%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-2021_compressed.pdf
+    legacy_tls: true
+  file: mew-yb-2021.pdf
+  sha256: c30941b78ee81bdafdf76b5514eea1a0fd2a3b84cf5d1ccde5cd0261eb3a35ae
+  retrieved_at: '2026-10-21'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+- id: mew-yb-2022
+  publisher: MEW
+  series: Statistical Year Book – Electrical Energy
+  tier: primary
+  title_en: 'Statistical Year Book: Electrical Energy 2022'
+  title_ar: كتاب الإحصاء السنوي – الطاقة الكهربائية 2022
+  data_year: 2022
+  cover_year_printed: '2022'
+  issued_printed: '2023'
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/0fpnlm2h/electrical-annual-report-2022-for-qr.pdf
+    legacy_tls: true
+  file: mew-yb-2022.pdf
+  sha256: b19552f461196b97f63d224c7fd71341ac033254270e1f782a57c69b099d1f5c
+  retrieved_at: '2026-10-21'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+- id: mew-yb-2023
+  publisher: MEW
+  series: Statistical Year Book – Electrical Energy
+  tier: primary
+  title_en: 'Statistical Year Book: Electrical Energy 2023'
+  title_ar: كتاب الإحصاء السنوي – الطاقة الكهربائية 2023
+  data_year: 2023
+  cover_year_printed: '2023'
+  issued_printed: '2024'
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/3zvjuf0s/electrical-annual-report-2023.pdf
+    legacy_tls: true
+  file: mew-yb-2023.pdf
+  sha256: e5f357a4ebb0c7c43f6cc4c60f77eb69f77e50d05969eb717c573efc9a48dc41
+  retrieved_at: '2026-10-21'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+- id: mew-mb-2025-05
+  publisher: MEW
+  series: Monthly Statistics Book
+  tier: primary
+  title_en: Monthly Statistics Book, May 2025
+  title_ar: كتاب الإحصاء الشهري – مايو 2025
+  data_year: 2025
+  data_month: 5
+  cover_year_printed: '2025'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/rfzlhpco/may-2025.pdf
+    legacy_tls: true
+  file: mew-mb-2025-05.pdf
+  sha256: 6c2ff3d3b68b56c9658e91dc5302e3d1ff3d64c13e78d4e4f48cdfb2b5436e6a
+  retrieved_at: '2026-10-21'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+- id: mew-mb-2025-06
+  publisher: MEW
+  series: Monthly Statistics Book
+  tier: primary
+  title_en: Monthly Statistics Book, June 2025
+  title_ar: كتاب الإحصاء الشهري – يونيو 2025
+  data_year: 2025
+  data_month: 6
+  cover_year_printed: '2025'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/ehipshov/jun-2025.pdf
+    legacy_tls: true
+  file: mew-mb-2025-06.pdf
+  sha256: 73f064ab13d16df6f360c7c45f3231f11552ad82f3f98c23e1964cc6490611a7
+  retrieved_at: '2026-10-21'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+- id: mew-mb-2025-07
+  publisher: MEW
+  series: Monthly Statistics Book
+  tier: primary
+  title_en: Monthly Statistics Book, July 2025
+  title_ar: كتاب الإحصاء الشهري – يوليو 2025
+  data_year: 2025
+  data_month: 7
+  cover_year_printed: '2025'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/ldji5kdv/july2025.pdf
+    legacy_tls: true
+  file: mew-mb-2025-07.pdf
+  sha256: e75c2c579787bc59ff2b23b1bf9374c27dad52636416886d8ac69fc7908e855f
+  retrieved_at: '2026-10-21'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+- id: csb-env-2013
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2013: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2013: الطاقة الكهربائية والمياه'
+  data_year: 2013
+  cover_year_printed: '2013'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2013'
+    chapter: كهرب
+  file: csb-env-2013.xlsx
+  sha256: 7408136fed3970ed85262577c763c8cc78b72c5e96d26c4ca3eb1305c36f0e1c
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2014
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2014: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2014: الطاقة الكهربائية والمياه'
+  data_year: 2014
+  cover_year_printed: '2014'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2014'
+    chapter: كهرب
+  file: csb-env-2014.xlsx
+  sha256: f66d6c914f8335aba734fe57a9d6fd64f71a0707449bc536b17e5cbb98fff152
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2015
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2015: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2015: الطاقة الكهربائية والمياه'
+  data_year: 2015
+  cover_year_printed: '2015'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2015'
+    chapter: كهرب
+  file: csb-env-2015.xlsx
+  sha256: eef3d9fe6aef8c4ca41643884038de3ed20ab656b9a770595fa965c5f266dfc3
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2016
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2016: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2016: الطاقة الكهربائية والمياه'
+  data_year: 2016
+  cover_year_printed: '2016'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2016'
+    chapter: كهرب
+  file: csb-env-2016.xlsx
+  sha256: a32fc2d27960a1157e873348c5efa079d2ef6826419f14cc06a179b5d00b677a
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2017
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2017: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2017: الطاقة الكهربائية والمياه'
+  data_year: 2017
+  cover_year_printed: '2017'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2017'
+    chapter: كهرب
+  file: csb-env-2017.xlsx
+  sha256: 22c39c5e09a676f181b9d01aa2612fce1eac13eb70bd7b8afac93f854d2fb765
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2018
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2018: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2018: الطاقة الكهربائية والمياه'
+  data_year: 2018
+  cover_year_printed: '2018'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2018'
+    chapter: كهرب
+  file: csb-env-2018.xlsx
+  sha256: 2f693842311c4163137a83cd49a2799735bd33d00e616b26567e78c3e1ffe062
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2019
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2019: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2019: الطاقة الكهربائية والمياه'
+  data_year: 2019
+  cover_year_printed: '2019'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2019'
+    chapter: كهرب
+  file: csb-env-2019.xlsx
+  sha256: 7226d671433a81ef61a3ba463395dc60209d2543c817ec0ca6f5341190ac720d
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2020
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2020: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2020: الطاقة الكهربائية والمياه'
+  data_year: 2020
+  cover_year_printed: '2020'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2020'
+    chapter: كهرب
+  file: csb-env-2020.xlsx
+  sha256: bf870e4a8bdc54421ed571f6ae5f873a25db2da95595a08ce2fd7951b12bdcb6
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2021
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2021: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2021: الطاقة الكهربائية والمياه'
+  data_year: 2021
+  cover_year_printed: '2021'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2021'
+    chapter: كهرب
+  file: csb-env-2021.xlsx
+  sha256: 62b9eb3a3dcf19a35ec99f16e30e17f1126733a2f958cfcaa28a58ba21bf9a0e
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2022
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2022: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2022: الطاقة الكهربائية والمياه'
+  data_year: 2022
+  cover_year_printed: '2022'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2022'
+    chapter: كهرب
+  file: csb-env-2022.xlsx
+  sha256: b8717400262d583d87a0772205dd091cd1a9377a69d1664e7302e12acce006e4
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2023
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2023: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2023: الطاقة الكهربائية والمياه'
+  data_year: 2023
+  cover_year_printed: '2023'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2023'
+    chapter: كهرب
+  file: csb-env-2023.xlsx
+  sha256: a0ce4db0299bf008db5f5b47c9bbc1d81e5b22ad1273de87474167bf4e69a3d7
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: csb-env-2024
+  publisher: CSB
+  series: Environment Statistics – Electricity and Water chapter (.xlsx)
+  tier: primary
+  title_en: 'Environment Statistics 2024: Electrical Energy and Water'
+  title_ar: 'إحصاءات البيئة 2024: الطاقة الكهربائية والمياه'
+  data_year: 2024
+  cover_year_printed: '2024'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: csb_postback
+    page_id: 44
+    parent: 4
+    year: '2024'
+    chapter: كهرب
+  file: csb-env-2024.xlsx
+  sha256: 25badc0ee8dbc8834db5c0e0221381095a38465034412e4c00d34b55dd3e61a9
+  retrieved_at: '2026-10-21'
+  licence_note: © Central Statistical Bureau, State of Kuwait. CSB's data use policy allows downloading and copying with copyright notices kept; not a named open licence. Archived unmodified; the publisher owns it.
+  note: CSB cites MEW as the source of these tables.
+- id: undata-edata-kw-el
+  publisher: UNSD
+  series: UNdata Energy Statistics Database (EDATA)
+  tier: secondary
+  title_en: 'Energy Statistics Database: Kuwait, electricity'
+  title_ar: null
+  data_year: null
+  cover_year_printed: null
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: undata
+    filter: cmID:EL;crID:414
+  file: undata-edata-kw-el.json
+  sha256: 363ef59ff31cc14435496c85c87f2ad66291f09f642a41e11c07d77baffc4238
+  retrieved_at: '2026-10-21'
+  licence_note: 'UNdata terms of use: data may be copied and redistributed with attribution to UNdata / United Nations Statistics Division.'
+  note: Secondary source. The sha256 is of the rows as parsed from the UNdata pages (JSON), since UNdata offers no working file download. Footnote 1 = 'Estimate' (as printed on UNdata).
