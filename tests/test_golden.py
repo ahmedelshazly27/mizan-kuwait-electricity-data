@@ -20,6 +20,9 @@ GOLDEN = [
     ("mew-yb-2023", "net-export-monthly", "sent_out_net_total", None, "2023-01-01", "4167053"),
     ("csb-env-2024", "110", "generation_gross", None, "2024-01-01", "89,499,606"),
     ("csb-env-2024", "108", "installed_capacity", "sabiya", "2024-01-01", "6885.0"),
+    ("mew-yb-2023", "station-units", "unit_capacity", "zour-south", "2023-01-01", "280 MW"),
+    ("mew-yb-2023", "station-units", "unit_commissioning_year", "shuaiba-south", "2023-01-01", "07/ 06/ 1970"),
+    ("mew-yb-2020", "station-units", "unit_commissioning_year", "zour-north", "2020-01-01", "26 / 11/ 2016**"),
 ]
 
 

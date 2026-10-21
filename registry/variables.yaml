@@ -28,3 +28,5 @@ variables:
   un_own_use_refineries: {unit: MWh, en: "UNdata: own use by oil refineries", ar: null}
   un_own_use_oil_gas: {unit: MWh, en: "UNdata: own use by oil and gas extraction", ar: null}
   desalination_use_detail: {unit: MWh, en: "Breakdown of a desalination-use column (CSB 2018 only); not a separate deduction", ar: null}
+  unit_capacity:      {unit: MW, en: Installed capacity of a generating unit, as printed on the station page, ar: القدرة المركبة للوحدة}
+  unit_commissioning_year: {unit: year, en: "Year of the unit's date of commissioning; value_printed keeps the full date as printed", ar: سنة تشغيل الوحدة}

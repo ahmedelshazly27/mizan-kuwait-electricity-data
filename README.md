@@ -14,12 +14,12 @@ Cite: [CITATION.cff](CITATION.cff)
 
 | Source (primary unless marked) | Editions | What we extract | Cells |
 |---|---|---|---|
-| MEW Statistical Year Book, Electrical Energy | data years 2020, 2021, 2022, 2023 | 1991/92/93/94–data-year history of installed capacity and generation by station, generation / station use / net sent out, maximum and minimum load, system peak with date, temperature and humidity; monthly generation, station use and net export by station for the data year | 5,741 |
+| MEW Statistical Year Book, Electrical Energy | data years 2020, 2021, 2022, 2023 | every generating unit with its block, technology, date of commissioning (as printed) and rating, from the station pages (114–117 units per edition, each station summing to its printed total); 1991/92/93/94–data-year history of installed capacity and generation by station, generation / station use / net sent out, maximum and minimum load, system peak with date, temperature and humidity; monthly generation, station use and net export by station for the data year | 6,659 |
 | MEW Monthly Statistics Book | May, June, July 2025 | daily generation and export by station, desalination use, net export | 2,375 |
 | CSB Environment Statistics, electricity chapter (.xlsx) | 2013–2024 | monthly generation, station use and sent out by station; monthly fuel use by station (gas, gas oil, crude, heavy oil); plant capacity and first operating year (2019–2024) | 11,457 |
 | UNdata Energy Statistics (**secondary**) | retrieved 2026-10-21 | consumption by sector 1990s–2023 (no primary source publishes this); supply rows used only for cross-checks | 503 |
 
-20,076 cells: 19,258 numbers, 649 printed dashes, 144 printed non-numbers
+20,994 cells: 19,258 numbers, 649 printed dashes, 144 printed non-numbers
 (composites such as `804+25`, dates), 25 blanks (nothing printed in a column that
 exists). See `coverage` in the database, or the coverage table on the page.
 

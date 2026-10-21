@@ -329,3 +329,44 @@ tables:
   - variable: sent_out_net_total
     level: national
     label: Net Export of Electrical Energy
+station_pages:
+- plant_id: shuwaikh
+  pages:
+  - 35
+  total_printed: '252'
+- plant_id: shuaiba-north
+  pages:
+  - 36
+  total_printed: '875.5'
+- plant_id: shuaiba-south
+  pages:
+  - 37
+  total_printed: '720'
+- plant_id: doha-east
+  pages:
+  - 38
+  - 39
+  total_printed: '1122'
+- plant_id: doha-west
+  pages:
+  - 40
+  - 41
+  total_printed: '2541'
+- plant_id: zour-south
+  pages:
+  - 42
+  - 43
+  total_printed: '5990.8'
+- plant_id: sabiya
+  pages:
+  - 46
+  - 47
+  total_printed: '7046.7'
+- plant_id: zour-north
+  pages:
+  - 50
+  total_printed: '1632'
+- plant_id: shagaya
+  pages:
+  - 51
+  total_printed: '70'

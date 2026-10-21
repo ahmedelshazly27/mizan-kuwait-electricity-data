@@ -332,3 +332,40 @@ tables:
   - row: November
     printed: '49821751'
     note: Hidden text outside the table frame (pdftotext bbox x 420-426, y 31-58 on the rotated page); nothing is visible there when the page is rendered.
+station_pages:
+- plant_id: shuwaikh
+  pages:
+  - 30
+  total_printed: '252'
+- plant_id: shuaiba-north
+  pages:
+  - 32
+  total_printed: '875.5'
+- plant_id: shuaiba-south
+  pages:
+  - 33
+  total_printed: '720'
+- plant_id: doha-east
+  pages:
+  - 34
+  - 35
+  total_printed: '1122'
+- plant_id: doha-west
+  pages:
+  - 36
+  - 37
+  total_printed: '2541'
+- plant_id: zour-south
+  pages:
+  - 38
+  - 39
+  total_printed: '5990.8'
+- plant_id: sabiya
+  pages:
+  - 42
+  - 43
+  total_printed: '7046.7'
+- plant_id: zour-north
+  pages:
+  - 47
+  total_printed: '1632'

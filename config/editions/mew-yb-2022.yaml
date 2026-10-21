@@ -328,3 +328,45 @@ tables:
   - variable: sent_out_net_total
     level: national
     label: Net Export of Electrical Energy
+station_pages:
+- plant_id: shuwaikh
+  pages:
+  - 37
+  total_printed: '252'
+- plant_id: shuaiba-north
+  pages:
+  - 39
+  total_printed: '875.5'
+- plant_id: shuaiba-south
+  pages:
+  - 40
+  total_printed: '720'
+- plant_id: doha-east
+  pages:
+  - 41
+  - 42
+  total_printed: '1122'
+- plant_id: doha-west
+  pages:
+  - 43
+  - 44
+  total_printed: '2541'
+- plant_id: zour-south
+  pages:
+  - 45
+  - 46
+  total_printed: '5990.8'
+- plant_id: sabiya
+  pages:
+  - 49
+  - 50
+  total_printed: '7046.7'
+  hidden_rows:
+  - page: 50
+    block: Gas Turbines OCGT-2 / SBOC-1
+    count: 4
+    note: The four SBOC-1 rows of p49 are repeated in the text layer at the top of p50; the rendered page starts with the SBCC-1 block (checked on the page image).
+- plant_id: zour-north
+  pages:
+  - 53
+  total_printed: '1632'
