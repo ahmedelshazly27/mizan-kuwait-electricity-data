@@ -52,6 +52,11 @@ def _tables(config: Path, sources: list[dict]) -> list[dict]:
             out.append({"source_id": s["id"], "table_no": t.get("table_no") or t["id"], "title_en": t.get("title_en"),
                         "title_ar": t.get("title_ar"), "unit_printed": t.get("unit_printed"), "sheet": t.get("sheet"),
                         "pages_pdf": json.dumps(pages if isinstance(pages, list) else [pages]) if pages else None})
+        stations = yaml.safe_load(ed.read_text()).get("station_pages")
+        if stations:
+            out.append({"source_id": s["id"], "table_no": "station-units", "title_en": "Station pages: units, date of commissioning and installed capacity",
+                        "title_ar": None, "unit_printed": "MW", "sheet": None,
+                        "pages_pdf": json.dumps(sorted(p for st in stations for p in st["pages"]))})
     return out
 
 
