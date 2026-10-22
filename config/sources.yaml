@@ -400,3 +400,42 @@ sources:
   retrieved_at: '2026-10-21'
   licence_note: 'UNdata terms of use: data may be copied and redistributed with attribution to UNdata / United Nations Statistics Division.'
   note: Secondary source. The sha256 is of the rows as parsed from the UNdata pages (JSON), since UNdata offers no working file download. Footnote 1 = 'Estimate' (as printed on UNdata).
+
+- id: mew-wyb-2020
+  publisher: MEW
+  series: Statistical Year Book – Water
+  tier: primary
+  title_en: 'Statistical Year Book: Water 2020'
+  title_ar: كتاب الإحصاء السنوي – المياه 2020
+  data_year: 2020
+  cover_year_printed: '2020'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/rckpzmm4/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D8%AD%D8%B5%D8%A7%D8%A1-%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A-%D8%A7%D9%84%D9%85%D9%8A%D8%A7%D9%87-compressed.pdf
+    legacy_tls: true
+  file: mew-wyb-2020.pdf
+  sha256: 6712b2ef3108aca90556db3826c34b8b20d40d12e0f147be29502642c2c37abd
+  retrieved_at: '2026-10-22'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+  note: Cover year from the running header; issue date not printed on the cover.
+- id: mew-wyb-2021
+  publisher: MEW
+  series: Statistical Year Book – Water
+  tier: primary
+  title_en: 'Statistical Year Book: Water 2021'
+  title_ar: كتاب الإحصاء السنوي – المياه 2021
+  data_year: 2021
+  cover_year_printed: '2021'
+  issued_printed: null
+  year_convention: calendar
+  fetch:
+    method: http
+    url: https://www.mew.gov.kw/media/2i1l4phf/final-water-book-2021_compressed.pdf
+    legacy_tls: true
+  file: mew-wyb-2021.pdf
+  sha256: 5da14fc37e7d87b6319b6f18ca9e88f9db94866732a8d54ca64d28829becc7e3
+  retrieved_at: '2026-10-22'
+  licence_note: © Ministry of Electricity, Water and Renewable Energy, State of Kuwait. Archived unmodified with its SHA-256; the publisher owns it. This dataset is a derived compilation.
+  note: Cover year from the running header; issue date not printed on the cover.

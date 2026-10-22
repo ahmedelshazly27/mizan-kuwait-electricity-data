@@ -19,6 +19,7 @@ units:
   "date":            {canonical: text, factor: null}
   "B Btus":          {canonical: billion_btu, factor: 1}
   "KD":              {canonical: KWD, factor: 1}
+  "MIG":             {canonical: m3, factor: 4546.09, note: "million imperial gallons; 1 imperial gallon = 4.54609 litres exactly"}
   "time":            {canonical: text, factor: null}
   "Co":              {canonical: degC, factor: 1, note: "MEW monthly books print Co for degrees Celsius"}
   "M.kWh":           {canonical: MWh, factor: 1000}

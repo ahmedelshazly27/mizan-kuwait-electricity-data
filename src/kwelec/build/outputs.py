@@ -59,6 +59,7 @@ def _tables(config: Path, sources: list[dict]) -> list[dict]:
                 ("daily_load", "daily-load", "System availability capacity, plant on bars and peak & minimum load (daily)", lambda c: c["pages"]),
                 ("daily_compare", "daily-load-compare", "Comparative maximum & minimum loads, this year and last (daily)", lambda c: [c["page"]]),
                 ("regional_peak", "regional-peak", "Loads of Kuwait's areas during the yearly peak load", lambda c: [c["page"]]),
+                ("distilled_monthly", "distilled-monthly", "Gross and net production of distilled water (MIG)", lambda c: [c["page"]]),
                 ("station_fuel", "station-fuel-history", "Consumption of fuel energy & fuel cost of power stations", lambda c: [c["page"]])):
             if key in cfg:
                 out.append({"source_id": s["id"], "table_no": table_no, "title_en": title, "title_ar": None,

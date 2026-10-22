@@ -20,6 +20,8 @@ variables:
   area_load_at_peak:  {unit: MW, en: "Load of a supply area (numbered as printed) at the time of the yearly system peak", ar: أحمال مناطق الكويت أثناء حمل الذروة السنوي}
   fuel_energy:        {unit: billion Btu, en: "Thermal energy of fuel consumed by power and distillation plants", ar: استهلاك الطاقة الحرارية}
   fuel_cost:          {unit: KD, en: "Fuel cost of power and distillation plants", ar: تكلفة الوقود}
+  water_production_gross: {unit: MIG, en: Gross production of distilled water, ar: إجمالي إنتاج المياه المقطرة}
+  water_production_net: {unit: MIG, en: Net production of distilled water, ar: صافي إنتاج المياه المقطرة}
   system_load:        {unit: MW, en: "System load at an instant (half-hourly curve on the yearly peak day, as printed)", ar: الحمل الكهربائي للشبكة}
   peak_load_time:     {unit: text, en: Time of the daily peak load as printed, ar: وقت الحمل الأقصى}
   min_load_time:      {unit: text, en: Time of the daily minimum load as printed, ar: وقت الحمل الأدنى}

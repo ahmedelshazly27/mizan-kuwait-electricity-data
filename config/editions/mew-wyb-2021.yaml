@@ -1,0 +1,20 @@
+# MEW Statistical Year Book – Water 2021. Only the monthly distilled-water table is
+# extracted (extract/mew_water.py); column order checked against the page image.
+source_id: mew-wyb-2021
+file: mew-wyb-2021.pdf
+data_year: 2021
+tables: []
+distilled_monthly:
+  page: 150
+  columns:   # printed order, checked against the page image
+    - {plant_id: shuwaikh, technology: msf, label: "Shuwaikh Station / Distillation Units"}
+    - {plant_id: shuwaikh-ro, technology: ro, label: "Shuwaikh Station / RO"}
+    - {plant_id: shuaiba-south, technology: msf, label: "Shuaiba South Station"}
+    - {plant_id: shuaiba-north, technology: msf, label: "Shuaiba North Station"}
+    - {plant_id: doha-east, technology: msf, label: "Doha East Station"}
+    - {plant_id: doha-west, technology: msf, label: "Doha West Station / Distillation Units"}
+    - {plant_id: doha-west-ro, technology: ro, label: "Doha West Station / RO"}
+    - {plant_id: zour-south, technology: msf, label: "Az-Zour South Station / Distillation Units"}
+    - {plant_id: zour-south-ro, technology: ro, label: "Az-Zour South Station / RO"}
+    - {plant_id: sabiya, technology: msf, label: "Sabiya Station"}
+    - {plant_id: zour-north, technology: med, label: "Az - Zour North Station"}

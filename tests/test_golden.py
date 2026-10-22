@@ -29,6 +29,9 @@ GOLDEN = [
     ("mew-mb-2025-07", "daily-load", "humidity_at_peak", None, "2025-07-01", "11%"),
     ("mew-mb-2025-05", "daily-load-compare", "max_load", None, "2024-05-01", "10260"),
     ("mew-yb-2023", "station-fuel-history", "fuel_energy", "doha-west", "2023-01-01", "115,140"),
+    ("mew-wyb-2021", "distilled-monthly", "water_production_gross", "zour-north", "2021-01-01", "2633.3342"),   # order checked on the image
+    ("mew-wyb-2021", "distilled-monthly", "water_production_gross", "sabiya", "2021-01-01", "1599.427"),
+    ("mew-wyb-2020", "distilled-monthly", "water_production_net", "doha-west-ro", "2020-01-01", "1048.932"),
     ("mew-yb-2023", "station-fuel-history", "fuel_cost", "zour-north", "2022-01-01", "372,525,921"),
 ]
 
