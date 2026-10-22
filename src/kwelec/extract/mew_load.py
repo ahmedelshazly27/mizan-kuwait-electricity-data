@@ -124,6 +124,83 @@ def _compare(pdf: Path, cfg: dict) -> list[Obs]:
     return out
 
 
+def _regional(pdf: Path, cfg: dict) -> list[Obs]:
+    """Loads of Kuwait's supply areas at the yearly peak (2023 book p86): 37 numbered
+    areas, each with its main feeding substation, and three peak days. Values come from
+    the text layer by column position (the six numeric columns are the leftmost on the
+    page; the Arabic area names are not usable in the text layer and are not stored).
+    Percent columns are derived and not stored. Each year must sum to the printed total."""
+    c = cfg["regional_peak"]
+    text = page_text(pdf, c["page"])
+    rows = []
+    for line in text.splitlines():
+        toks = [(m.start(), m.group()) for m in re.finditer(r"\S+", line) if m.start() < c["value_columns_before"]]
+        vals = [v for _, v in toks if re.fullmatch(r"-?\d+(\.\d+)?|-", v)]
+        if any("/" in v for _, v in toks):
+            continue
+        if len(vals) == 7 and vals[0] == str(len(rows) + 1):      # the row number printed among the values
+            vals = vals[1:]
+        if len(vals) == 6:
+            rows.append(vals)
+    *areas, total = rows
+    if len(areas) != c["rows"]:
+        raise ValueError(f"{cfg['source_id']} p{c['page']}: {len(areas)} area rows, expected {c['rows']}")
+    out = []
+    for k, day in enumerate(c["peak_days"]):
+        col = 2 * k + 1
+        got = sum(float(r[col]) for r in areas if r[col] != "-")
+        if abs(got - float(total[col])) > 0.5:
+            raise ValueError(f"{cfg['source_id']} p{c['page']}: areas sum to {got:g} on {day}, printed total {total[col]}")
+        for i, r in enumerate(areas, start=1):
+            v = r[col]
+            out.append(Obs(cfg["source_id"], "regional-peak", "area_load_at_peak", "area", day, day, "daily",
+                           None if v == "-" else v, v, "dash" if v == "-" else "number", "MW", str(i),
+                           f"{day} / MW", "pdf_text", page_pdf=c["page"]))
+    return out
+
+
+def _station_fuel(pdf: Path, cfg: dict) -> list[Obs]:
+    """Fuel energy (billion Btu) and fuel cost (KD) by station, five years (2023 book
+    p188). The values line is printed above the station name. Thermal energy covers
+    power and distillation together (the table's other pages say 'Power & Distillation
+    Plants'). Each year's stations must sum to the printed total."""
+    c = cfg["station_fuel"]
+    lines = page_text(pdf, c["page"]).splitlines()
+    num = r"[\d,]+(?:\.\d+)?"
+    vals = re.compile(rf"^\s*((?:{num}\s+){{9}}{num})\s*$")
+    rows, pending = [], None
+    for line in lines:
+        m = vals.match(line)
+        if m:
+            pending = m.group(1).split()
+            continue
+        name = re.sub(r"[^\x00-\x7f]", " ", line).strip()
+        if pending and name in c["stations"]:
+            rows.append((name, pending))
+            pending = None
+    names = [n for n, _ in rows]
+    if names != list(c["stations"]):
+        raise ValueError(f"{cfg['source_id']} p{c['page']}: stations {names}, expected {list(c['stations'])}")
+    out = []
+    years = c["years"]
+    for k, y in enumerate(years):
+        for j, (var, unit) in enumerate((("fuel_energy", "B Btus"), ("fuel_cost", "KD"))):
+            col = 2 * k + j
+            parts = sum(float(v[col].replace(",", "")) for n, v in rows if c["stations"][n] != "national")
+            total = float(next(v[col] for n, v in rows if c["stations"][n] == "national").replace(",", ""))
+            if abs(parts - total) > 0.5 * len(rows):          # each printed value rounded to the unit
+                raise ValueError(f"{cfg['source_id']} p{c['page']} {y} {var}: stations sum to {parts:,.3f}, printed total {total:,.3f}")
+            for n, v in rows:
+                pid = c["stations"][n]
+                out.append(Obs(cfg["source_id"], "station-fuel-history", var, "national" if pid == "national" else "plant",
+                               f"{y}-01-01", f"{y}-12-31", "annual", v[col].replace(",", ""), v[col], "number", unit,
+                               n, f"{y} / {'Consumption of Thermal Energy (B Btus)' if j == 0 else 'Fuel Cost ( KD )'}",
+                               "pdf_text", plant_id=None if pid == "national" else pid, page_pdf=c["page"]))
+    return out
+
+
 def extract(pdf: Path, cfg: dict) -> list[Obs]:
     return ((_curve(pdf, cfg) if "peak_day_curve" in cfg else []) + (_daily(pdf, cfg) if "daily_load" in cfg else [])
-            + (_compare(pdf, cfg) if "daily_compare" in cfg else []))
+            + (_compare(pdf, cfg) if "daily_compare" in cfg else [])
+            + (_regional(pdf, cfg) if "regional_peak" in cfg else [])
+            + (_station_fuel(pdf, cfg) if "station_fuel" in cfg else []))

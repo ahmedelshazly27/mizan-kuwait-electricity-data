@@ -57,7 +57,9 @@ def _tables(config: Path, sources: list[dict]) -> list[dict]:
         for key, table_no, title, pages in (
                 ("peak_day_curve", "peak-day-load", "System loads on the day of the yearly peak (half-hourly)", lambda c: [c["page"]]),
                 ("daily_load", "daily-load", "System availability capacity, plant on bars and peak & minimum load (daily)", lambda c: c["pages"]),
-                ("daily_compare", "daily-load-compare", "Comparative maximum & minimum loads, this year and last (daily)", lambda c: [c["page"]])):
+                ("daily_compare", "daily-load-compare", "Comparative maximum & minimum loads, this year and last (daily)", lambda c: [c["page"]]),
+                ("regional_peak", "regional-peak", "Loads of Kuwait's areas during the yearly peak load", lambda c: [c["page"]]),
+                ("station_fuel", "station-fuel-history", "Consumption of fuel energy & fuel cost of power stations", lambda c: [c["page"]])):
             if key in cfg:
                 out.append({"source_id": s["id"], "table_no": table_no, "title_en": title, "title_ar": None,
                             "unit_printed": "MW", "sheet": None, "pages_pdf": json.dumps(pages(cfg[key]))})

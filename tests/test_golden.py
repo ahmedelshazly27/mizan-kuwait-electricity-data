@@ -28,6 +28,8 @@ GOLDEN = [
     ("mew-mb-2025-07", "daily-load", "peak_load_time", None, "2025-07-14", "13:30"),
     ("mew-mb-2025-07", "daily-load", "humidity_at_peak", None, "2025-07-01", "11%"),
     ("mew-mb-2025-05", "daily-load-compare", "max_load", None, "2024-05-01", "10260"),
+    ("mew-yb-2023", "station-fuel-history", "fuel_energy", "doha-west", "2023-01-01", "115,140"),
+    ("mew-yb-2023", "station-fuel-history", "fuel_cost", "zour-north", "2022-01-01", "372,525,921"),
 ]
 
 
@@ -38,3 +40,9 @@ def test_golden_values():
                 and (r["plant_id"] or None) == plant and p0 in (r["period_start"], r["observed_at"])
                 and r["frequency"] in ("annual", "monthly", "daily", "instant") and r["row_label"] not in ("Sub Total", "SubTotal")]
         assert printed in [r["value_printed"] for r in hits], (sid, tno, var, plant, p0, [r["value_printed"] for r in hits])
+
+
+def test_regional_peak_rows():
+    rows = [r for r in csv.DictReader(OBS.open()) if r["table_no"] == "regional-peak" and r["period_start"] == "2023-08-02"]
+    got = {r["row_label"]: r["value_printed"] for r in rows}
+    assert len(got) == 37 and got["3"] == "609" and got["33"] == "1428" and got["35"] == "349"

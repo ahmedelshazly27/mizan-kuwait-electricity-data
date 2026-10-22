@@ -14,12 +14,12 @@ Cite: [CITATION.cff](CITATION.cff)
 
 | Source (primary unless marked) | Editions | What we extract | Cells |
 |---|---|---|---|
-| MEW Statistical Year Book, Electrical Energy | data years 2020, 2021, 2022, 2023 | every generating unit with its block, technology, date of commissioning (as printed) and rating, from the station pages (114–117 units per edition, each station summing to its printed total); 1991/92/93/94–data-year history of installed capacity and generation by station, generation / station use / net sent out, maximum and minimum load, system peak with date, temperature and humidity; monthly generation, station use and net export by station for the data year; the half-hourly system load on the day of the yearly peak | 6,851 |
+| MEW Statistical Year Book, Electrical Energy | data years 2020, 2021, 2022, 2023 | every generating unit with its block, technology, date of commissioning (as printed) and rating, from the station pages (114–117 units per edition, each station summing to its printed total); 1991/92/93/94–data-year history of installed capacity and generation by station, generation / station use / net sent out, maximum and minimum load, system peak with date, temperature and humidity; monthly generation, station use and net export by station for the data year; the half-hourly system load on the day of the yearly peak; (2023 edition) loads of the 37 supply areas at the yearly peak 2021-2023, and fuel energy and fuel cost by station 2019-2023 | 7,072 |
 | MEW Monthly Statistics Book | May, June, July 2025 | daily generation and export by station, desalination use, net export; daily peak and minimum load (July: with times, temperature, humidity, available capacity, plant on bars and spinning reserve; May and June: with the same day of 2024 and the maximum temperature) | 3,113 |
 | CSB Environment Statistics, electricity chapter (.xlsx) | 2013–2024 | monthly generation, station use and sent out by station; monthly fuel use by station (gas, gas oil, crude, heavy oil); plant capacity and first operating year (2019–2024) | 11,457 |
 | UNdata Energy Statistics (**secondary**) | retrieved 2026-10-21 | consumption by sector 1990s–2023 (no primary source publishes this); supply rows used only for cross-checks | 503 |
 
-21,924 cells: 21,044 numbers, 649 printed dashes, 206 printed non-numbers
+22,145 cells: 21,261 numbers, 653 printed dashes, 206 printed non-numbers
 (composites such as `804+25`, dates, times), 25 blanks (nothing printed in a column that
 exists). See `coverage` in the database, or the coverage table on the page.
 

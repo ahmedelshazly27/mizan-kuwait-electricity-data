@@ -378,3 +378,30 @@ peak_day_curve:
   date: 2023-08-02
   title_printed: "Yearly Peak Load) on 2nd Of August 2023"
   peak_printed: "16940"
+
+# Loads of the supply areas at the yearly peak, 2021-2023 (extract/mew_load.py). Rows are
+# numbered as printed (1 = generating stations' own use). Area names are Arabic in a font
+# whose text layer is unusable; they are not stored here (see the toolkit's zone mapping).
+regional_peak:
+  page: 86
+  rows: 37
+  value_columns_before: 62
+  peak_days: [2023-08-02, 2022-08-09, 2021-07-28]
+
+# Fuel energy and fuel cost by station, 2019-2023 (extract/mew_load.py). Covers power and
+# distillation together. Station names as printed -> plant ids.
+station_fuel:
+  page: 188
+  years: [2019, 2020, 2021, 2022, 2023]
+  stations:
+    Shuwaikh Station: shuwaikh
+    Shuwaikh (RO) Station: shuwaikh-ro
+    Shuaiba South Station: shuaiba-south
+    Shuaiba North Station: shuaiba-north
+    Doha East Stn.: doha-east
+    Doha West Stn.: doha-west
+    Az-Zour South Stn.: zour-south
+    Az-Zour South (RO) Stn.: zour-south-ro
+    Sabiya Station: sabiya
+    Az-Zour North Stn.: zour-north
+    Total: national

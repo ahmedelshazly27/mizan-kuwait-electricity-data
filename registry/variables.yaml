@@ -17,6 +17,9 @@ variables:
   temperature_at_peak: {unit: degC, en: Maximum temperature at peak load, ar: درجة الحرارة القصوى عند الحمل الأقصى}
   humidity_at_peak:   {unit: percent, en: Maximum relative humidity at peak load, ar: الرطوبة النسبية القصوى عند الحمل الأقصى}
   max_temperature:    {unit: degC, en: "Maximum temperature of the day, as printed (Max.Temp. C)", ar: أقصى درجة حرارة}
+  area_load_at_peak:  {unit: MW, en: "Load of a supply area (numbered as printed) at the time of the yearly system peak", ar: أحمال مناطق الكويت أثناء حمل الذروة السنوي}
+  fuel_energy:        {unit: billion Btu, en: "Thermal energy of fuel consumed by power and distillation plants", ar: استهلاك الطاقة الحرارية}
+  fuel_cost:          {unit: KD, en: "Fuel cost of power and distillation plants", ar: تكلفة الوقود}
   system_load:        {unit: MW, en: "System load at an instant (half-hourly curve on the yearly peak day, as printed)", ar: الحمل الكهربائي للشبكة}
   peak_load_time:     {unit: text, en: Time of the daily peak load as printed, ar: وقت الحمل الأقصى}
   min_load_time:      {unit: text, en: Time of the daily minimum load as printed, ar: وقت الحمل الأدنى}

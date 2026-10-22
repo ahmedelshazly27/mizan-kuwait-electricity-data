@@ -17,6 +17,8 @@ units:
   "%":               {canonical: percent, factor: 1}
   "ºC":              {canonical: degC, factor: 1}
   "date":            {canonical: text, factor: null}
+  "B Btus":          {canonical: billion_btu, factor: 1}
+  "KD":              {canonical: KWD, factor: 1}
   "time":            {canonical: text, factor: null}
   "Co":              {canonical: degC, factor: 1, note: "MEW monthly books print Co for degrees Celsius"}
   "M.kWh":           {canonical: MWh, factor: 1000}
